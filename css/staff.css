@@ -1,0 +1,86 @@
+body {
+    background-color: #f6f960;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: #fff;
+    width: 900px;
+    margin: 0 auto;
+}
+.tab, .research-detail, .project-detail {
+    width: 800px;
+    margin: 0 auto;
+}
+.tab ul {
+    margin: 0;
+    padding: 0;
+}
+.tab ul li {
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    background-color: #e3e3e3;
+    color: #c5c5c5;
+    list-style: none;
+    margin-right: 2px;
+    font-weight: bold;
+}
+.tab ul li.current {
+    background-color: #cacaca;
+    color: #666666;
+}
+.clearfix:after{
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    /* 触发 hasLayout */
+    zoom: 1;
+}
+h4 {
+    box-sizing: border-box;
+    height: 35px;
+    background-color: #f2dcda;
+    font-size: 16px;
+    color: #000;
+    line-height: 35px;
+    padding-left: 14px;
+    font-weight: bolder;
+}
+.arrow {
+    color: #adadad;
+    float: right;
+    margin-right: 20px;
+}
+.text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 14px;
+}
+.text .left {
+    width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.text .right {
+    display: inline-block;
+    vertical-align: middle;
+}
+.research-detail, .project-detail {
+    display: none;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}

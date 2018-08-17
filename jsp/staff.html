@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/staff.css" />
+    <script src="../js/jquery/jquery-2.1.1-min.js"></script>
+    <title>科研人员智能检索</title>
+</head>
+<body>
+    <div class="main">
+        <div class="tab clearfix">
+            <ul class="tab-btn">
+                <li id="tab1" class="tab-research current">学术研究情况</li>
+                <li id="tab2" class="tab-project">项目承研情况</li>
+            </ul>
+        </div>
+        <div class="research-detail show">
+            <h4>&#8226;&#160;概况<span class="arrow" data-flag="up">&#9650;</span></h4>
+            <div class="text">
+                <div class="left">
+                    <p>学术论文：XX篇</p>
+                    <p>发明专利：XX项</p>
+                    <p>专&#160;&#160;&#160;&#160;&#160;&#160;&#160;著：XX部</p>
+                </div>
+                <div class="right">
+                    <ul>研究方向
+                        <li>研究方向2</li>
+                        <li>研究方向3</li>
+                        <li>研究方向4</li>
+                        <li>研究方向5</li>
+                    </ul>
+                </div>
+
+            </div>
+            <h4>&#8226;&#160;代表性论文<span class="arrow" data-flag="up">&#9650;</span></h4>
+            <div class="text">
+                <ol>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                </ol>
+            </div>
+            <h4>&#8226;&#160;代表性专著<span class="arrow" data-flag="up">&#9650;</span></h4>
+            <div class="text">
+                <ol>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                </ol>
+            </div>
+            <h4>&#8226;&#160;主要专利<span class="arrow" data-flag="up">&#9650;</span></h4>
+            <div class="text">
+                <ol>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                </ol>
+            </div>
+        </div>
+        <div class="project-detail">
+            <h4>&#8226;&#160;概况<span class="arrow" data-flag="up">&#9650;</span></h4>
+            <div class="text">
+                <div class="left">
+                    <ul>JW科技委
+                        <li>负责的项目：XX个</li>
+                        <li>参与的项目：XX个</li>
+                        <li>提交的构想：XX份</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    图
+                </div>
+            </div>
+            <h4>&#8226;&#160;主要负责的项目<span class="arrow" data-flag="up">&#9650;</span></h4>
+            <div class="text">
+                <ol>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('.tab-btn li').each(function(){
+            $(this).click(function(){
+                if($(this).attr('id') === 'tab1') {
+                    $(this).addClass('current');
+                    $('#tab2').removeClass('current');
+                    $('.research-detail').addClass('show');
+                    $('.project-detail').removeClass('show');
+                } else {
+                    $('#tab2').addClass('current');
+                    $('#tab1').removeClass('current');
+                    $('.project-detail').addClass('show');
+                    $('.research-detail').removeClass('show');
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+</html>
