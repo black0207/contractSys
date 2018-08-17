@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>创新特区合同智能检索</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../resources/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+    <!--header部分开始-->
+    <div id="header">
+        <div class="inner">
+            <!--logo-->
+            <a href="index.html" class="fl logo"><img src="../images/hetong1.png" height="40px" style="vertical-align: bottom;
+    margin-bottom: -5px;">
+                <span style="color: white;line-height: 36px;font-size: 26px;">XX智能检索系统</span></a>
+                 <!--<img src="../images/logo.png" alt="">-->
+            <!--注册&登录-->
+            <div class="login fr">
+                <a href="register.html" class="registerA">注册</a>
+                <a href="javascript:void(0);" class="loginA">登录</a>
+            </div>
+            <!-- 当前用户 -->
+            <div id="currentUser" class="currentUser fr">
+                <a href="javascript:void(0);" class="curUser">
+                    <span class="uname"></span>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up hide"></i>
+                </a>
+                <ul>
+                    <li><a href="myCollects.html" class="headerDropItem">我的收藏</a></li>
+                    <li><a href="myDownload.html" class="headerDropItem">我的下载</a></li>
+                    <li><a href="settings.html" class="headerDropItem">账号设置</a></li>
+                    <li class="logout"><a href="javascript:void(0);" class="headerDropItem">退出</a></li>
+                </ul>
+            </div>
+            <!-- 手册 -->
+            <!--<div class="fr">-->
+                <!--<a id="userManual" href="index.html#" style="color: #fff;height: 60px;line-height: 60px;display: inline-block;font-size: 12px;padding: 0 10px;">用户手册</a><i style="margin: 0 10px;font-style: normal;color: #fff;">|</i>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--header部分结束-->
+    <!-- 遮罩开始 -->
+    <div class="mask hide"></div>
+    <!-- 遮罩结束 -->
+    <!-- 登录框开始 -->
+    <div class="hideLogin login_box hide">
+        <ul class="clearfix">
+            <li class="login_num current">
+                <h3 class="login_title">账号登录</h3>
+            </li>
+            <!-- <li class="login_sweep">
+                <h3 class="login_title">扫码登录</h3>
+            </li> -->
+        </ul>
+        <div class="login_cont">
+            <!--账号登录-->
+            <div class="loginNum_box">
+                <div class="loginTip">用户名或密码不匹配，请重新输入</div>
+                <div class="login_item userName_box">
+                    <div class="input_box">
+                        <label for="userName"><i></i></label>
+                        <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 15px; z-index: 2;  line-height: 40px;left:50px;">请输入用户名</span>
+                        <input type="text" id="userName" name="user_name">
+                        <i class="i_status fa fa-check-circle"></i>
+                    </div>
+                    <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i><span>用户名或密码不匹配，请重新输入</span> </p>
+                </div>
+                <div class="login_item">
+                    <div class="input_box userPwd_box">
+                        <label for="userPwd"><i></i></label>
+                        <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 15px; z-index: 2; line-height: 40px;left:50px;">请输入密码</span>
+                        <input type="password" id="userPwd" name="user_pwd">
+                        <i class="i_status fa fa-check-circle"></i>
+                    </div>
+                    <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i> <span>用户名或密码不匹配，请重新输入</span></p>
+                </div>
+                <input type="button" value="登 录" id="loginBtn" class="login_btn">
+                <p style="float: left;">没有账号?<a href="register.html" class="register_btn">立即注册</a></p>
+                <a href="changePwd.html" class="forget_btn fr">忘记密码</a>
+            </div>
+            <!--扫码登录-->
+            <!-- <div class="loginSweep_box hide">
+                <p class="hints_qr"> <i class="fa fa-minus-circle" aria-hidden="true"></i> 二维码已失效，点击刷新</p>
+                <div class="qrcodeImg_box">
+                    <img src="../images/QRcode.jpg" alt="" class="qrcodeImg">
+                </div>
+            </div> -->
+        </div>
+        <a href="javascript:void (0)" class="closeBtn">
+            <!-- <i class="fa fa-close"></i> -->
+            ×
+        </a>
+    </div>
+    <!-- 登录框结束 -->
+    <!-- 下载浏览器开始 -->
+    <div class="download_chrome hide">
+        <!-- <p class="broType">检测到您正使用IE<span class="ie_vertion">8</span>(6/7/8/9/10)访问系统，为了更好地使用本产品</p> -->
+        <!-- <p class="broType">检测到您正使用IE<span class="ie_vertion"></span>访问系统，为了更好地使用本产品，</p> -->
+        <ul>
+            <li class="sug">检测到您正使用IE<span class="ie_vertion"></span>访问系统，为了更好地使用本产品，</li>
+            <li class="sug">建议您使用IE8（及以上版本）、谷歌浏览器进行访问。</li>
+            <!-- <li class="sug">建议您下载谷歌浏览器进行访问：</li>
+            <li><a href="javascript:void(0);" class="advanChrome">Chrome浏览器(Win7/Win8/Win10)</a></li>
+            <li><a href="javascript:void(0);" class="XpChrome">Chrome浏览器(WinXP)</a></li> -->
+        </ul>
+        <div class="btnBox">
+            <input type="button" value="关闭" id="closeChroBox" class="closeChroBox">
+        </div>
+    </div>
+    <!-- 下载浏览器结束 -->
+    <!--主体部分开始-->
+    <div class="main inner">
+        <!--search-->
+        <div class="searchBox">
+            <div class="searchLeft fl">
+                <div class="search_select">
+                    <input type="text" value="名  称" readonly>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <div class="search_menu hide">
+                    <ul>
+                        <li><a href="javascript:void(0);">名  称</a></li>
+                        <li><a href="javascript:void(0);">编  号</a></li>
+                        <li><a href="javascript:void(0);">负责人</a></li>
+                        <li><a href="javascript:void(0);">所属单位</a></li>
+                        <li><a href="javascript:void(0);">全文内容</a></li>
+                        <!--<li><a href="javascript:void(0);">审理经过</a></li>
+                        <li><a href="javascript:void(0);">诉称</a></li>
+                        <li><a href="javascript:void(0);">辩称</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <!--input-->
+            <div class="searchMid fl" style="height:45px">
+				<div class="searchTitle">
+					<span class="active" title="合同查询">合同查询</span>
+					<span title="构想查询">构想查询</span>
+					<span title="人员查询">人员查询</span>
+				</div>
+                <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 15px; z-index: 2;  line-height: 45px">请输入查询条件</span>
+                <input type="text" class="search_ipt" >
+                <form id="fileForm1" name="fileForm" method="post" enctype="multipart/form-data" style="display:none;">
+                    <span class="upfileWrap1">
+                        上传
+                        <input type="file" name="upFile" id="upFile" accept=".doc,.docx,.txt" >
+                    </span>
+                </form>
+                <div class="dropDown_box" style="display:none;">
+                    <!-- <div class="ul_shade">
+                        <ul>
+
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="searchRig fr">
+                <input type="button" id="searchBtn" value="检&nbsp;&nbsp;索">
+            </div>
+        </div>
+      <!-- <div class="search_advanced">
+           <p>XX智能检索系统简介</p>
+            <p>主要针对不同合同/构想文本的各项关键点进行查询，显示相关查询结果概要或者合同/构想文本详细内容，也可以上传构想文件进行查重操作，操作简单清晰，为您提供更多检索、查重便利。</p>
+            &lt;!&ndash; <a href="advanced.html" target="_blank">前往搜索</a> &ndash;&gt;
+        </div>-->
+    </div>
+    <!--主体部分结束-->
+    <!--footer开始-->
+    <div id="footer">
+        <div class="inner">
+            <div class="footerLfet fl">
+                <a href="javascript:void(0);"><span style="color: white"><img src="../images/11.png" style="width: 100px;height: 50px;"></span></a>
+            </div>
+            <div class="footerMid fl">
+                <p>版权所有 中国电子科技集团公司第十五研究所 </p>
+                <p>地址：北京市海淀区北四环中路211号华北科技大厦15层 邮编：100083</p>
+                <!--<p><img src="../images/logo_15.png" alt=""> 京ICP备10011865号-1 京公网安备11010502022735 咨询电话：010-89055055 官方邮箱：info@cjbdi.com</p>-->
+            </div>
+            <!--<div class="footerRig fr">-->
+                <!--<img src="../images/QRcode.jpg" alt="">-->
+                <!--<p>研究院微信公众号</p>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+    <!--footer结束-->
+    <!--悬浮框-->
+    <!--<div class="help">-->
+        <!--<ul>-->
+            <!--<li><a href="userManual.html" class="questions" style="padding-top: 3px" target="_blank">使 用 指 南</a></li>-->
+            <!--<li><a href="feedBack.html" class="opinions" style="padding-top: 3px" target="_blank">问 题 反 馈</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!-- loading遮罩 -->
+    <div class="shade" style="display: none;">
+        <div id="loading"><img alt="loading" src="../images/file_loading.gif"></div>
+    </div>
+    <script src="../js/jquery/jquery-2.1.1-min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <![endif]-->
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/md5.js"></script>
+    <!-- <script src="../js/store.min.js"></script> -->
+    <script src="../js/jquery-form.js"></script>
+    <script src="../js/pages/public-time=20180710_1.js"></script>
+    <script src="../js/pop/pop_index-time=20180808_1.js"></script>
+    <script src="../js/pages/header-time=20180808_1.js"></script>
+    <script src="../js/pages/index-time=20180710_1.js"></script>
+	<script>
+		$(".searchTitle span ").click(function(){
+			$(".searchTitle span").removeClass("active");
+			$(this).addClass("active");
+			
+			if($(this).html() == "构想查询"){
+				$("#fileForm1").css('display','block');
+			}else{
+				$("#fileForm1").css('display','none');
+			}
+		
+		});
+	
+	</script>
+</body>
+
+</html>

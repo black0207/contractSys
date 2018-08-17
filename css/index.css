@@ -1,0 +1,459 @@
+body {
+   /* background: url("../images/in_bg.png") no-repeat 770px 0;*/
+}
+
+
+
+/*主体部分*/
+
+.main {
+    min-height: 48%;
+    /*max-height: 80%;*/
+    /*height: 50%;*/
+    margin-top: 15%;
+    /*margin-bottom: 40%;*/
+}
+
+.searchBox {
+    height: 70px;
+    width: 954px;
+    margin: 0 auto;
+    background-color: rgba(14, 14, 14, 0.05);
+    /*margin-top: 100px;*/
+}
+
+
+
+/*左半部分*/
+
+.searchLeft {
+    width: 160px;
+    margin-left: 15px;
+    margin-top: 12px;
+    position: relative;
+}
+
+.search_select {
+    width: 100%;
+    height: 43px;
+    border: 1px solid #b2b2b2;
+    color: #012e6b;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.search_select:hover {
+    border: 1px solid #6094cd;
+    box-shadow: 0 0 1px 0 #6094cd inset;
+    -webkit-box-shadow: 0 0 1px 0 #6094cd inset;
+    -moz-box-shadow: 0 0 1px 0 #6094cd inset;
+    -ms-box-shadow: 0 0 1px 0 #6094cd inset;
+    -o-box-shadow: 0 0 1px 0 #6094cd inset;
+}
+
+.search_select input {
+    width: 100px;
+    color: #012e6b;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.search_select i {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.search_menu {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    text-align: center;
+    border: 1px solid #dbdbdb;
+}
+
+.search_menu ul li {
+    background-color: #fff;
+    line-height: 38px;
+    cursor: pointer;
+}
+
+.search_menu ul li a {
+    color: #012d6b;
+    font-size: 14px;
+}
+
+.search_menu ul li:hover {
+    background-color: #6094cd;
+}
+
+.search_menu ul li:hover a {
+    color: #fff;
+}
+
+
+
+
+/*中间部分*/
+
+.searchMid {
+    margin-left: 12px;
+    margin-top: 12px;
+    width: 610px;
+    border: 1px solid #b2b2b2;
+    position: relative;
+    background-color: #fff;
+}
+
+.search_ipt {
+    width: 505px;
+    height: 33px;
+    /*line-height: 43px;*/
+    /*padding-right: 104px;*/
+    background-color: #fff;
+    /*border: 1px solid #b2b2b2;*/
+    padding-left: 15px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    position: relative;
+}
+
+ .searchMid:hover {
+    border: 1px solid #6094cd;
+
+    box-shadow: 0 0 1px 0 #6094cd inset;
+    -webkit-box-shadow: 0 0 1px 0 #6094cd inset;
+    -moz-box-shadow: 0 0 1px 0 #6094cd inset;
+    -ms-box-shadow: 0 0 1px 0 #6094cd inset;
+    -o-box-shadow: 0 0 1px 0 #6094cd inset;
+} 
+
+/*  .search_ipt_hover {
+   border: 1px solid #6094cd;
+
+   box-shadow: 0 0 1px 0 #6094cd inset;
+   -webkit-box-shadow: 0 0 1px 0 #6094cd inset;
+   -moz-box-shadow: 0 0 1px 0 #6094cd inset;
+   -ms-box-shadow: 0 0 1px 0 #6094cd inset;
+   -o-box-shadow: 0 0 1px 0 #6094cd inset;
+}  */
+/* .search_ipt:focus {
+    border: 1px solid #6094cd;
+}
+ */
+ .search_ipt_focus {
+    border: 1px solid #6094cd;
+}
+ 
+.search_select_hover {
+    border: 1px solid #6094cd;
+    box-shadow: 0 0 1px 0 #6094cd inset;
+    -webkit-box-shadow: 0 0 1px 0 #6094cd inset;
+    -moz-box-shadow: 0 0 1px 0 #6094cd inset;
+    -ms-box-shadow: 0 0 1px 0 #6094cd inset;
+    -o-box-shadow: 0 0 1px 0 #6094cd inset;
+}
+
+    /*新增样式 BY LZY*/
+#fileForm1 {
+    width: 105px;
+    height: 43px;
+    line-height: 43px;
+    background-color: #FFF;
+    float: right;
+    position: relative;
+}
+
+.upfileWrap1 {
+    position: absolute;
+    right: 7px;
+    top: 6px;
+
+    width: 49px;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 40px;
+    background: #6094cd url("../images/in_upload.png") no-repeat 15px;
+    border: 1px solid #b5cde8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.upfileWrap1 input {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    filter: alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+
+/*下拉盒子*/
+
+.dropDown_box {
+    width: 586px;
+    background-color: #fff;
+    margin-left: 12px;
+    border: 1px solid #6094cd;
+    border-top: none;
+    box-sizing: border-box;
+    position: absolute;
+    top:44px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.ul_shade {
+    max-height: 380px;
+    /*overflow: auto;*/
+    width: 605px;
+}
+.ul_shade ul{
+    max-height: 380px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.dropDown_box ul li {
+    width: 584px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #262626;
+}
+
+.dropDown_box ul li span {
+    display: inline-block;
+    width: 66px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #e8f1f5;
+    text-align: center;
+    color: #6f83a6;
+    margin: 6px 10px 7px;
+    float: left;
+}
+
+.dropDown_box ul li a {
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin: 6px 0 7px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 34em;
+}
+
+.dropDown_box ul li a:hover {
+    text-overflow: inherit;
+    overflow: visible;
+}
+
+.dropDown_box .item {
+    margin: 0;
+    background: none;
+    margin-right: 20px;
+    width: auto;
+}
+
+.dropDown_box ul li:hover {
+    background-color: #bcd0e8;
+}
+
+.drop-li-active {
+    background-color: #bcd0e8;
+}
+
+
+
+
+/*右半部分*/
+
+.searchRig {
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.searchRig input {
+    width: 133px;
+    height: 45px;
+    background-color: #f14c1a;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+
+
+/*高级搜索*/
+
+.search_advanced {
+    width: 954px;
+    background: url("../images/gjSearch.png") no-repeat 0 0;
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px 0;
+    line-height: 28px;
+}
+
+@font-face {
+    font-family: 'MFYueHei';
+    src: url('../fonts/MFYueHei_Noncommercial-Light.ttf'),
+    url('../fonts/MFYueHei_Noncommercial-Regular.ttf');
+}
+
+.search_advanced p:first-child {
+    font-family: 'MFYueHei';
+    font-size: 20px;
+    color: #4a6a90;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+}
+
+.search_advanced p:nth-child(2) {
+    font-size: 12px;
+    color: #4a6a90;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.search_advanced a {
+    display: inline-block;
+    width: 140px;
+    height: 38px;
+    background-color: #6094cd;
+    color: #fff;
+    line-height: 38px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.questions {
+    font-size: 13px;
+}
+
+
+
+/*遮罩loading*/
+
+.shade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff, endColorstr=#19ffffff);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+#loading {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    width: 153px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -76px;
+    margin-top: -8px;
+    top: 50%;
+}
+
+
+
+/*下载浏览器开始*/
+
+.download_chrome {
+    width: 500px;
+    /*height: 195px;*/
+    height: 135px;
+    padding-top: 20px;
+    position: fixed;
+    /*top: 78px;*/
+    top: 110px;
+    left: 50%;
+    margin-left: -250px;
+    background-color: #fff;
+    z-index: 20;
+}
+
+.broType {
+    height: 35px;
+    line-height: 35px;
+    padding-top: 5px;
+    /*font-size: 14px;*/
+    font-size: 18px;
+    /*font-style: italic;*/
+    /*color: #666;*/
+    color: #333;
+    text-align: center;
+}
+
+.download_chrome ul {
+    /*width: 275px;*/
+    width: 440px;
+    margin: 0 auto;
+}
+
+.sug {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #333;
+}
+
+.XpChrome,
+.advanChrome {
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    color: #3673b6;
+    text-decoration: underline;
+}
+
+.btnBox {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.closeChroBox {
+    width: 60px;
+    height: 28px;
+    color: #fff;
+    background-color: #f14c1a;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/*下载浏览器结束*/

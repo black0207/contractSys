@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>类案智能推送</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../resources/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/advanced.css" />
+</head>
+
+<body>
+    <!--header部分开始-->
+    <div id="header">
+        <div class="inner">
+            <!--logo-->
+            <a href="index.html" class="fl logo"><img src="../images/logo.png" alt=""></a>
+            <!--注册&登录-->
+            <div class="login fr">
+                <a href="register.html" class="registerA">注册</a>
+                <a href="javascript:void(0);" class="loginA">登录</a>
+            </div>
+            <!-- 当前用户 -->
+            <div id="currentUser" class="currentUser fr">
+                <a href="javascript:void(0);" class="curUser">
+                    <span class="uname"></span>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up hide"></i>
+                </a>
+                <ul>
+                    <li><a href="myCollects.html" class="headerDropItem">我的收藏</a></li>
+                    <li><a href="myDownload.html" class="headerDropItem">我的下载</a></li>
+                    <li><a href="settings.html" class="headerDropItem">账号设置</a></li>
+                    <li class="logout"><a href="javascript:void(0);" class="headerDropItem">退出</a></li>
+                </ul>
+            </div>
+            <!-- 手册 -->
+            <div class="fr">
+                <a id="userManual" href="advanced.html#" style="color: #fff;height: 60px;line-height: 60px;display: inline-block;font-size: 12px;padding: 0 10px;">用户手册</a><i style="margin: 0 10px;font-style: normal;color: #fff;">|</i>
+            </div>
+        </div>
+    </div>
+    <!--header部分结束-->
+    <!-- 登录框开始 -->
+    <div class="mask hide"></div>
+    <div class="hideLogin login_box hide">
+        <ul class="clearfix">
+            <li class="login_num current">
+                <h3 class="login_title">账号登录</h3>
+            </li>
+        </ul>
+        <div class="login_cont">
+            <!--账号登录-->
+            <div class="loginNum_box">
+                <div class="loginTip">用户名或密码不匹配，请重新输入</div>
+                <div class="login_item userName_box">
+                    <div class="input_box">
+                        <label for="userName"><i></i></label>
+                        <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2;  line-height: 40px;left:50px;">请输入用户名</span>
+                        <input type="text" id="userName" name="user_name">
+                        <i class="i_status fa fa-check-circle"></i>
+                    </div>
+                    <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i><span>用户名或密码不匹配，请重新输入</span> </p>
+                </div>
+                <div class="login_item">
+                    <div class="input_box userPwd_box">
+                        <label for="userPwd"><i></i></label>
+                        <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2;  line-height: 40px;left:50px;">请输入密码</span>
+                        <input type="password" id="userPwd" name="user_pwd">
+                        <i class="i_status fa fa-check-circle"></i>
+                    </div>
+                    <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i> <span>用户名或密码不匹配，请重新输入</span></p>
+                </div>
+                <input type="button" value="登 录" id="loginBtn" class="login_btn">
+                <p style="float: left;">没有账号?<a href="register.html" class="register_btn">立即注册</a></p>
+                <a href="changePwd.html" class="forget_btn fr">忘记密码</a>
+            </div>
+        </div>
+        <a href="javascript:void (0)" class="closeBtn">
+            ×
+        </a>
+    </div>
+    <!-- 登录框结束 -->
+    <!-- 主体部分开始 -->
+    <div id="main">
+        <div class="searchOutterBox clearfix">
+            <div class="inner">
+                <p class="friendTip">针对每个案由，进行案情特征、争议焦点的多维梳理，精确搜索裁判文书，为您节省更多时间。</p>
+                <div class="inputBox">
+                    <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2;  line-height: 42px;left:10px;">输入案由名称，快速定位</span>
+                    <input type="text" id="searchInp" class="searchInp">
+                    <ul class="dropList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="casecauseOuterBox ">
+            <div class="inner">
+                <ul class="firstLevel clearfix">
+                    <li class="firstItem active" style="border-left: 1px solid #e6eded;">民事案由</li>
+                    <li class="firstItem">刑事案由</li>
+                    <li class="firstItem">行政案由</li>
+                </ul>
+                <div class="chooseBox">
+                </div>
+                <div class="tip-bottom">
+                    <p class="tip-bottom">
+                        未找到想要的案由，<a href="advanced.html#header" class="goTop">返回顶部</a>搜索案由
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体部分结束 -->
+    <!--footer开始-->
+    <div id="footer">
+        <div class="inner">
+            <div class="footerLfet fl">
+                <a href="javascript:void(0);"><img src="../images/logo_n.png" alt=""></a>
+            </div>
+            <div class="footerMid fl">
+                <p>版权所有 中国司法大数据研究院 京ICP备10011865号-1 京公网安备11010502022735</p>
+                <p>地址：北京市海淀区北四环中路211号太极大厦15层 邮编：100083</p>
+                <p>咨询电话：010-89055055 官方邮箱：info@cjbdi.com</p>
+            </div>
+            <div class="footerRig fr">
+                <img src="../images/QRcode.jpg" alt="">
+                <p>研究院微信公众号</p>
+            </div>
+        </div>
+    </div>
+    <!--footer结束-->
+    <!--悬浮框-->
+    <div class="help">
+        <ul>
+            <li><a href="userManual.html" class="questions" style="padding-top: 3px" target="_blank">使 用 指 南</a></li>
+            <li><a href="feedBack.html" class="opinions" style="padding-top: 3px" target="_blank">问 题 反 馈</a></li>
+        </ul>
+    </div>
+    <script src="../js/jquery/jquery-2.1.1-min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <![endif]-->
+    <script src="../js/jquery.cookie.js"></script>
+    <!-- <script src="../js/store.min.js"></script> -->
+    <script src="../js/pages/casecauseData.js"></script>
+    <script src="../js/pages/public-time=20180710_1.js"></script>
+    <script src="../js/md5.js"></script>
+    <script src="../js/pages/header-time=20180710_1.js"></script>
+    <script src="../js/clamp.min.js"></script>
+    <script src="../js/pop/pop_index.js"></script>
+    <script src="../js/pages/advanced-time=20180710_1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+/*header部分*/
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+#header {
+    width: 100%;
+    height: 60px;
+    background-color: #273352;
+}
+
+.logo {
+    margin: 11px 0 0 13px;
+}
+
+.login {
+    font-size: 12px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.login>a {
+    color: #fff;
+    padding: 0 10px;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+}
+
+.registerBtn:hover,
+.loginBtn:hover {
+    background-color: #445274;
+}
+/*新增样式 BY LZy*/
+.searchTitle{
+    position:absolute;
+    margin-top:-49px;
+    background-color:#f3f3f3;
+    height:36px;
+
+}
+.searchTitle span{
+    display:inline-block;
+    padding:10px 20px;
+    color:#c4c4c4;
+    font-weight:normal;
+}
+.searchTitle span:hover{
+    cursor:pointer
+}
+.active{
+    background-color:#ddd;
+    color:black !important;
+    font-weight:bold !important;
+}
+
+
+
+/*当前用户*/
+
+.currentUser {
+    /*width: 110px;*/
+    height: 60px;
+    font-size: 12px;
+    margin-right: 5px;
+    color: #fff;
+    position: relative;
+    display: none;
+}
+
+.curUser {
+    display: inline-block;
+    /*width: 110px;*/
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFF;
+}
+
+.curUser:hover {
+    background-color: #445274;
+    transition: 0.5s;
+}
+
+.curUser_active {
+    background-color: #445274;
+    transition: 0.5s;
+}
+
+.uname {
+    display: inline-block;
+    margin-right: 5px;
+    width: 89px;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.currentUser ul {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+
+    position: absolute;
+    left: 0;
+    top: 60px;
+    z-index: 10;
+    display: none;
+}
+
+.currentUser li {
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.headerDropItem {
+    display: inline-block;
+    width: 108px;
+    height: 25px;
+    line-height: 25px;
+    color: #333333;
+}
+
+.headerDropItem:hover {
+    background-color: #6094cd;
+    color: #FFFFFF;
+}
+
+.logout {
+    border-top: 1px solid #e6e6e6;
+}
+
+
+
+
+
+
+/*遮罩*/
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 15;
+
+    background-color: #000;
+    opacity: 0.5;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff, endColorstr=#19ffffff);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.login_box {
+    width: 460px;
+    height: 335px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    margin-left: -230px;
+    z-index: 100;
+}
+
+.login_box ul {
+    padding: 14px 13px;
+}
+
+.login_box ul li {
+    float: left;
+    text-align: center;
+    color: #999;
+    width: 100%;
+}
+
+.login_title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.login_box ul li.current h3 {
+    color: #6094cd;
+}
+
+.login_cont {
+    border-top: 1px solid #e4e4e4;
+}
+
+.loginNum_box {
+    padding: 0px 30px 28px;
+}
+
+.loginTip {
+    height: 30px;
+    line-height: 30px;
+    color: red;
+    visibility: hidden;
+}
+
+.login_item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.input_box {
+    width: 398px;
+    height: 38px;
+    border: 1px solid #cecece;
+}
+
+.login_item label {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    float: left;
+    padding-top: 8px;
+    background-color: #EDEDED;
+}
+
+.login_item label i {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url("../images/user.png") no-repeat center center;
+}
+
+.userPwd_box label i {
+    background: url("../images/pwd.png") no-repeat center center;
+}
+
+.input_box input {
+    width: 300px;
+    height: 26px;
+    padding-top: 7px;
+    float: left;
+    /*line-height: 40px;*/
+    padding-left: 10px;
+    font-size: 14px;
+    margin-right: 11px;
+}
+
+.input_box .i_status {
+    font-size: 16px;
+    color: #82d300;
+    line-height: 40px;
+    display: none;
+}
+
+.hints_login {
+    position: absolute;
+    z-index: 2;
+    left: 1%;
+    line-height: 30px;
+    color: red;
+    display: none;
+    font-size: 12px;
+}
+
+.login_btn {
+    width: 400px;
+    height: 40px;
+    background-color: #6094cd;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 18px 0 20px 0;
+}
+
+.login_cont>p {
+    font-size: 12px;
+    margin-left: 1%;
+    float: left;
+}
+
+.register_btn,
+.forget_btn {
+    color: #6094cd;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.loginSweep_box {
+    padding: 30px;
+    text-align: center;
+}
+
+.hints_qr {
+    color: red;
+    margin-bottom: 5px;
+}
+
+.qrcodeImg {
+    width: 205px;
+    height: 205px;
+}
+
+.loginNum_box>p {
+    font-size: 12px;
+    color: #777777;
+}
+
+.closeBtn {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: #AEAEAE;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    text-align: center;
+    line-height: 25px;
+    padding-left: 2px;
+    font-size: 35px;
+}
+
+.personal_box {
+    width: 110px;
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    padding: 5px 0;
+    background-color: #fff;
+    display: none;
+}
+
+.personal_box ul li {
+    width: 100%;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+
+.personal_box ul li.divider {
+    height: 0px;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 5px 0;
+}
+
+.personal_box ul li a {
+    color: #333;
+}
+
+.personal_box ul li:hover {
+    background-color: #6094cd;
+}
+
+.personal_box ul li:hover a {
+    color: #fff;
+}
+
+.warning_border {
+    border: 1px solid red;
+}
+
+.passing_border {
+    border: 1px solid #6094cd;
+}
+
+.hints_false {
+    line-height: 40px;
+    color: red;
+    font-size: 13px;
+    visibility: hidden;
+}

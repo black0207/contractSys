@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chorme=1">
+    <meta name="renderer" content="webkit">
+    <title>合同内容查看</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../resources/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/contractDetail.css" />
+    <script src="../js/pages/echarts.min.js"></script>
+</head>
+
+<body>
+<!--header部分开始-->
+<div id="header">
+    <div class="inner">
+        <!--logo-->
+        <a href="index.html" class="fl logo"><img src="../images/hetong1.png" height="40px" style="vertical-align: bottom;
+    margin-bottom: -5px;">
+            <span style="color: white;line-height: 36px;font-size: 26px;">XX智能检索系统</span></a>
+        <!--注册&登录-->
+        <div class="login fr">
+            <a href="./register.html" class="registerA">注册</a>
+            <a href="javascript:void(0);" class="loginA">登录</a>
+        </div>
+        <!-- 当前用户 -->
+        <div id="currentUser" class="currentUser fr">
+            <a href="javascript:void(0);" class="curUser">
+                <span class="uname"></span>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-chevron-up hide"></i>
+            </a>
+            <ul>
+                <li><a href="./myCollects.html" class="headerDropItem">我的收藏</a></li>
+                <li><a href="./myDownload.html" class="headerDropItem">我的下载</a></li>
+                <li><a href="./settings.html" class="headerDropItem">账号设置</a></li>
+                <li class="logout"><a href="javascript:void(0);" class="headerDropItem">退出</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<!--header部分结束-->
+<!-- 登录框开始 -->
+<div class="mask hide"></div>
+<div class="hideLogin login_box hide">
+    <ul class="clearfix">
+        <li class="login_num current">
+            <h3 class="login_title">账号登录</h3>
+        </li>
+        <!-- <li class="login_sweep">
+        <h3 class="login_title">扫码登录</h3>
+    </li> -->
+    </ul>
+    <div class="login_cont">
+        <!--账号登录-->
+        <div class="loginNum_box">
+            <div class="loginTip">用户名或密码不匹配，请重新输入</div>
+            <div class="login_item userName_box">
+                <div class="input_box">
+                    <label for="userName"><i></i></label>
+                    <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2; line-height: 40px;left:50px;">请输入用户名</span>
+                    <input type="text" id="userName" name="user_name">
+                    <i class="i_status fa fa-check-circle"></i>
+                </div>
+                <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i><span>用户名或密码不匹配，请重新输入</span> </p>
+            </div>
+            <div class="login_item">
+                <div class="input_box userPwd_box">
+                    <label for="userPwd"><i></i></label>
+                    <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2; line-height: 40px;left:50px;">请输入密码</span>
+                    <input type="password" id="userPwd" name="user_pwd">
+                    <i class="i_status fa fa-check-circle"></i>
+                </div>
+                <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i> <span>用户名或密码不匹配，请重新输入</span></p>
+            </div>
+            <input type="button" value="登 录" id="loginBtn" class="login_btn">
+            <p style="float: left;">没有账号?<a href="./register.html" class="register_btn">立即注册</a></p>
+            <a href="./changePwd.html" class="forget_btn fr">忘记密码</a>
+        </div>
+        <!--扫码登录-->
+        <!-- <div class="loginSweep_box hide">
+        <p class="hints_qr"> <i class="fa fa-minus-circle" aria-hidden="true"></i> 二维码已失效，点击刷新</p>
+        <div class="qrcodeImg_box">
+            <img src="../images/QRcode.jpg" alt="" class="qrcodeImg">
+        </div>
+    </div> -->
+    </div>
+    <a href="javascript:void (0)" class="closeBtn">
+        <!-- <i class="fa fa-close"></i> -->
+        ×
+    </a>
+</div>
+<!-- 登录框结束 -->
+<!--main开始-->
+<div id="main">
+    <div class="inner clearfix">
+        <div class="mainLeft fl">
+            <div class="miji">密级：公开</div>
+            <!--文书标题-->
+            <div class="docTitle">
+                <h2>面向领域的精准搜索技术</h2>
+            </div>
+
+            <!--文书详情-->
+            <div class="docBox">
+                <!--基本信息-->
+                <div id="basic_info" class="infos">
+                    <h3 class="toggle">&#167;&#160;基本信息<span class="arrow" data-flag="up">&#9650;</span></h3>
+                    <div class="con_text">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="title-area">合同编号：</span>
+                                        <span class="info-area" title="17-H863-01-ZT-005-018-01">17-H863-01-ZT-005-018-01</span>
+                                    </td>
+                                    <td>
+                                        <span class="title-area">课题负责人：</span>
+                                        <span class="info-area" title="李常宝">李常宝</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <span class="title-area">承担单位：</span>
+                                        <span class="info-area" title="中国电子科技集团公司第十五研究所">中国电子科技集团公司第十五研究所</span>
+                                    </td>
+                                    <td>
+                                        <span class="title-area">合同价款：</span>
+                                        <span class="info-area" title="150万元">150万元</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="title-area">起止时间：</span>
+                                        <span class="info-area" title="2017年3月31日至2018年3月31日">2017年3月31日至2018年3月31日</span>
+                                    </td>
+                                    <td>
+                                        <span class="title-area">所属领域：</span>
+                                        <span class="info-area" title="XXXXXXXXXXXXX">XXXXXXXXXXXXX</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="title-area">所属主题/项目：</span>
+                                        <span class="info-area" title="XXXXXXXXXXXXX">XXXXXXXXXXXXX</span>
+                                    </td>
+                                    <td>
+                                        <span class="title-area">首席科学家：</span>
+                                        <span class="info-area" title="程学旗">程学旗</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--合同甲乙方-->
+                <div id="partAB" class="infos">
+                    <h3 class="toggle">&#167;&#160;合同甲乙方<span class="arrow" data-flag="up">&#9650;</span></h3>
+                    <div class="con_text">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <span class="title-area" style="font-weight: bold;">甲方：</span>
+                                    <span class="info-area tips" >国防科技项目管理中心（筹）</span>
+                                    <div class="hide tip-text" >单位名称： 国防科技项目管理中心（筹）<br>法定代表人:邓联平<br>开户名称：中央JW科技技术委员会综合局<br>银行账号：110060210018800006223<br> 开户银行：交通银行北京亚运村支行</div>
+                                </td>
+                                <td>
+                                    <span class="title-area" style="font-weight: bold;">乙方：</span>
+                                    <span class="info-area tips" >中国电子科技集团公司第十五研究所</span>
+                                    <div class="hide tip-text" >单位名称：中国电子科技集团公司第十五研究所<br>法定代表人：刘学林<br>组织机构代码：12100000400011294W<br>税号：110108400011294<br>开户名称：中国电子科技集团公司第十五研究所<br>银行账号：11001028100056082608<br>开户银行：建行长安支行营业部</div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="title-area">联系人：</span>
+                                    <span class="info-area tips" >徐中南</span>
+                                    <div class="hide tip-text" >联系人：徐中南<br>联系电话：010-66350482<br>通信地址：北京市朝阳区北三环中路4号<br>邮政编码：100720</div>
+                                </td>
+                                <td>
+                                    <span class="title-area">联系人：</span>
+                                    <span class="info-area tips" >郭前进</span>
+                                    <div class="hide tip-text" >联系人：郭前进<br>联系电话：010-89056243<br>通信地址：北京市海淀区北四环中路211号<br>邮政编码：100083</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="title-area">财务负责人：</span>
+                                    <span class="info-area tips" >贾莉</span>
+                                    <div class="hide tip-text" >财务负责人：贾莉<br>联系电话：010-66905824<br>职务/职称：无<br>Email邮箱：无</div>
+                                </td>
+                                <td>
+                                    <span class="title-area">财务负责人：</span>
+                                    <span class="info-area tips" >黄荔武</span>
+                                    <div class="hide tip-text" >财务负责人：黄荔武<br>联系电话：010-89055191<br>职务/职称：处长<br>Email邮箱：caiwuchu2002@yahoo.com.cn</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--合同内容-->
+                <div id="context" class="infos">
+                    <h3 class="toggle">&#167;&#160;合同内容<span class="arrow" data-flag="up">&#9650;</span></h3>
+                    <!--为了实现折叠加的一层-->
+                    <div>
+                        <div class="con_text">
+                            <h4 id="researchTarget" class="toggle">&#8226;&#160;研究目标<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <p>针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑，达到如下牵引性技术指标：</p>
+                                <ol>
+                                    <li>能够针对领域对象自动构建知识模型，并基于知识模型完成领域对象知识的自动抽取以及领域知识库的自动构建与更新；</li>
+                                    <li>能够在线构建搜索请求的领域语义画像，提供精准搜索能力，预期搜索目标在搜索结果前十条中出现的概率不低于80%，并对领域内的不同用户群提供个性化排序展现能力；</li>
+                                    <li>提供一项典型应用示范，应用示范的平均搜索时间不高于1秒，前十条搜索结果的准确率不低于90%。</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--研究内容-->
+                        <div class="con_text">
+                            <h4 id="researchContent" class="toggle">&#8226;&#160;研究内容<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <dt>1.模型驱动的领域知识库构建技术</dt>
+                                <dd>针对领域数据信息的多样性、碎片化问题，研究模型驱动的领域知识库构建技术，从领域大数据的知识表示、领域对象的特征建模、领域对象的知识抽取等方面开展技术突破，通过配置领域对象特征及数据映射关系，实现领域知识库的自动构建。</dd>
+                                <dt>2.基于领域知识库的精准搜索技术</dt>
+                                <dd>以提升相关性计算的语义准确性为目标，研究基于领域知识库的精准搜索技术，从多态query语义理解、基于领域对象模型的搜索画像构建、基于领域知识的搜索相关性计算等方面开展技术突破，针对自然语言片段、文档等高复杂搜索请求，能够自动生成搜索语义画像并识别搜索意向，基于搜索意向信息以及领域知识库构建精准语义搜索能力。</dd>
+                                <dt>3.基于业务需求画像的个性化排序技术</dt>
+                                <dd>针对通用搜索引擎技术中搜索意图的多可能性导致的搜索精准性不足问题，研究基于业务需求画像的个性化排序技术，从领域需求特征抽取与领域需求画像构建、搜索结果的多维在线聚类等方面展开技术突破，提升领域搜索结果的精准性。</dd>
+                            </div>
+
+                        </div>
+                        <!--技术要求-->
+                        <div class="con_text">
+                            <h4 id="techRequest" class="toggle">&#8226;&#160;技术要求<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <h5>2017年技术指标为：</h5>
+                                <ol>
+                                    <li>提供领域知识库构建能力，能够通过配置领域对象的特征及数据映射关系构建领域知识库；</li>
+                                    <li>提供领域精准搜索能力，支持术语、缩略语、文档等多种搜索请求的精准语义搜索；</li>
+                                    <li>提供一项典型应用示范。</li>
+                                </ol>
+
+                            </div>
+
+                        </div>
+                        <!--主要指标-->
+                        <div class="con_text">
+                            <h4 id="mainIndicator" class="toggle">&#8226;&#160;主要指标<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <dt>1.领域知识库构建能力指标</dt>
+                                <dd>在典型示范应用中，知识库中实例规模大于1000万。</dd>
+                                <dt>2.搜索精准性指标</dt>
+                                <dd>在典型示范应用中，千万级记录规模下，文本类query搜索的平均时间不高于1秒，搜索平均召回率不低于75%，前十条搜索结果的语义相关准确率不低于95%；语义画像query的预期搜索目标在前十条搜索结果中出现的概率不低于80%。</dd>
+
+                            </div>
+
+                        </div>
+                        <!--研究进度-->
+                        <div id="researchSchedule" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;研究进度<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+
+                                <div class="time-line">
+                                    <div class="left-arrow"></div>
+                                    <div class="right-arrow"></div>
+                                    <div class="time-box">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>2017年3月31日</dt>
+                                                    <dd>明确项目研究内容，制定项目研究方案</dd>
+                                                </dl>
+
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>2017年6月30日</dt>
+                                                    <dd>完成领域搜索架构的方案设计，开展领域知识表示及抽取研究</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>2017年9月30日</dt>
+                                                    <dd>完成领域知识库构建研究</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>2017年10月1日</dt>
+                                                    <dd>通过项目中期考核</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>2017年12月31日</dt>
+                                                    <dd>完成基于领域知识库的精准搜索技术及基于业务需求画像的个性化排序技术研究</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>2018年3月31日</dt>
+                                                    <dd>完成软件原型研发，申请课题验收</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <!--<table>-->
+                                    <!--<thead>-->
+                                    <!--<tr>-->
+                                        <!--<td style="width: 50px;">节点</td>-->
+                                        <!--<td style="width: 200px;">时间</td>-->
+                                        <!--<td>进度要求</td>-->
+                                    <!--</tr>-->
+                                    <!--</thead>-->
+                                    <!--<tbody>-->
+                                    <!--<tr>-->
+                                        <!--<td>1</td>-->
+                                        <!--<td>2017年3月31日</td>-->
+                                        <!--<td style="text-align: left;">明确项目研究内容，制定项目研究方案</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>2</td>-->
+                                        <!--<td>2017年6月30日</td>-->
+                                        <!--<td style="text-align: left;">完成领域搜索架构的方案设计，开展领域知识表示及抽取研究</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>3</td>-->
+                                        <!--<td>2017年9月30日</td>-->
+                                        <!--<td style="text-align: left;">完成领域知识库构建研究</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>4</td>-->
+                                        <!--<td>2017年10月1日</td>-->
+                                        <!--<td style="text-align: left;">通过项目中期考核</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>5</td>-->
+                                        <!--<td>2017年12月31日</td>-->
+                                        <!--<td style="text-align: left;">完成基于领域知识库的精准搜索技术及基于业务需求画像的个性化排序技术研究</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td>6</td>-->
+                                        <!--<td>2018年3月31日</td>-->
+                                        <!--<td style="text-align: left;">完成软件原型研发，申请课题验收</td>-->
+                                    <!--</tr>-->
+                                    <!--</tbody>-->
+                                <!--</table>-->
+
+                            </div>
+
+                        </div>
+                        <!--提交要求-->
+                        <div class="con_text">
+                            <h4 id="submitRequest" class="toggle">&#8226;&#160;提交要求<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <dl>
+                                    <dt>1.定期进展报告</dt>
+                                    <dd>按研究进度安排每三个月左右提交进展报告</dd>
+                                    <dt>2.原型系统软件</dt>
+                                    <dd>满足合同指标</dd>
+                                    <dt>3.面向领域的精准搜索技术研究报告</dt>
+                                    <dd>对关键技术突破方案进行阐述</dd>
+                                    <dt>4.面向领域的精准搜索技术研究工作总结报告</dt>
+                                    <dd>总结、阐述研究过程</dd>
+                                </dl>
+
+                            </div>
+
+                        </div>
+                        <!--研究人员-->
+                        <div class="con_text">
+                            <h4 id="researchStaff" class="toggle">&#8226;&#160;研究人员<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text" style="margin-left: 20px;">
+                                <div class="person-text">
+                                    <span style="font-weight: bold; padding-left: 40px;">主要研究人员8人</span><br>
+                                    <span style="font-weight: bold; padding-left: 30px;">合计工作时长62人月</span><br><br>
+                                    <span style="font-style: italic;font-weight: bold;">人员名单：</span>
+                                    <span class="tips">李常宝</span>,
+                                    <div class="hide tip-text" >姓名：李常宝<br>性别：男<br>职称：高级工程师<br>专业：计算机科学与技术<br>工作单位：中电科十五所<br>投入时间：6个月<br>任务分工：总体设计与组织协调<br>身份证号：</div>
+                                    <span class="tips">王杉</span>,
+                                    <div class="hide tip-text" >姓名：王杉<br>性别：男<br>职称：工程师<br>专业：计算机科学与技术<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+                                    <span class="tips">贾贺</span>,
+                                    <div class="hide tip-text" >姓名：贾贺<br>性别：女<br>职称：工程师<br>专业：计算机软件与理论<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+                                    <span class="tips">高泽</span>,
+                                    <div class="hide tip-text" >姓名：高泽<br>性别：男<br>职称：工程师<br>专业：计算机科学与技术<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+                                    <span class="tips">范燕燕</span>,
+                                    <div class="hide tip-text" >姓名：范燕燕<br>性别：女<br>职称：工程师<br>专业：计算机科学与技术<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+                                    <span class="tips">潘爽</span>,
+                                    <div class="hide tip-text" >姓名：潘爽<br>性别：女<br>职称：工程师<br>专业：计算机科学与技术<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+                                    <span class="tips">杨淙钧</span>,
+                                    <div class="hide tip-text" >姓名：杨淙钧<br>性别：男<br>职称：工程师<br>专业：计算机软件与理论<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+                                    <span class="tips">李融</span>
+                                    <div class="hide tip-text" >姓名：李融<br>性别：男<br>职称：工程师<br>专业：计算机软件与理论<br>工作单位：中电科十五所<br>投入时间：8个月<br>任务分工：关键技术突破与软件研发<br>身份证号：</div>
+
+                                </div>
+                                <div id="personChart" class="person-chart"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--研究目标-->
+
+                </div>
+
+                <!--合同经费-->
+                <div id="funds" class="infos">
+                    <h3 class="toggle">&#167;&#160;合同经费<span class="arrow" data-flag="up">&#9650;</span></h3>
+                    <!--为了实现折叠加的一层-->
+                    <div>
+                        <!--经费预算-->
+                        <div id="fundsBudget" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;经费预算<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <div class="funds-text" style="font-weight: bold; text-align: center;">总经费150万元</div>
+                                <div id="fundsChart" class="funds-chart"></div>
+                            </div>
+                        </div>
+                        <!--经费使用事项-->
+                        <div id="fundsUse" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;经费使用事项<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">无</div>
+                        </div>
+                        <!--经费拨付-->
+                        <div id="fundsAppropriation" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;经费拨付<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>时间</td>
+                                        <td>拨付条件</td>
+                                        <td>经费金额（万元）</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2017年7月</td>
+                                        <td>合同生效</td>
+                                        <td>75</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017年10月</td>
+                                        <td>通过中期验收</td>
+                                        <td>75</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--条件拨付-->
+                        <div id="conditionAppropriation" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;条件拨付<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">无</div>
+                        </div>
+                        <!--有关说明-->
+                        <div id="relatedExplanation" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;有关说明<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <p>国防科技项目管理中心（筹）根据承担单位提供的经费使用报告，按照不超过年度已签订合同数的10%进行不定期抽查。被抽查的承担单位有义务按要求提供经费的详细使用情况，以及有关原始票据的复印件（及电子版）等相关材料。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--合同条款-->
+                <div id="terms" class="infos">
+                    <h3 class="toggle">&#167;&#160;合同条款<span class="arrow" data-flag="up">&#9650;</span></h3>
+                    <div>
+                        <!--共同条款-->
+                        <div id="commonTerms" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;共同条款<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <dl>
+                                    <dt>（一）合同生效</dt>
+                                    <dd>1.本合同自缔约各方完成签字（盖章）之日起生效。其中，合同乙方应首先完成签字盖章；合同设总体单位的，应当在附加条款中声明，且总体单位应先于合同甲方签字盖章；项目设首席科学家的，合同甲方首席科学家应先于合同甲方法定代表人（委托代理人）签字。</dd>
+                                    <dt>（二）合同履行</dt>
+                                    <dd>2.缔约各方应本着诚实守信原则，忠实履行合同义务。</dd>
+                                    <dd>3.合同周期超过9个月的，合同乙方每6个月应向合同甲方递交定期进展报告。定期进展报告内容包括研究进展情况和经费使用情况，其中经费使用情况需对预算科目进行逐项说明。</dd>
+                                    <dd>4.合同乙方未按合同约定要求履行合同的，合同甲方有权中止后续经费拨付。若合同甲方拨付该节点的经费，视为合同甲方已经认可该节点的变更。</dd>
+                                    <dd>5.合同甲方未按合同约定进度要求拨付合同约定的经费，合同乙方可中止合同约定的科研任务或暂停研究周期累计，直至收到合同约定的拨付经费；合同乙方也可按原约定继续执行合同，并根据实际情况，提出合同变更请求。
+                                    </dd>
+                                    <dt>（三）合同变更</dt>
+                                    <dd>6.合同履行过程中，合同乙方提出变更合同的，应在导致变更的事件发生后15个工作日内向合同甲方提出变更请求，经缔约各方协商一致，签订补充协议。若不能协商一致的，必须按原合同继续履行。</dd>
+                                    <dd>7.合同履行过程中，合同甲方提出变更合同的，应在导致变更的事件发生后15个工作日内向合同乙方提出变更请求，经缔约各方协商一致，签订补充协议。若不能协商一致的，合同甲方可以终止合同。</dd>
+                                    <dd>8.通过竞争择优确定承担单位、合同变更有可能影响竞争择优公平性的，合同甲方应作出说明，并报JW科技委科技创新局备案。</dd>
+                                    <dt>（四）合同评估</dt>
+                                    <dd>9.若需推迟验收评估的，合同乙方应在导致推迟的事件发生后15个工作日内向合同甲方提出申请，经缔约各方协商一致，确定合同评估时间。若不能协商一致的，合同甲方按合同约定时间组织评估。</dd>
+                                    <dd>10.合同评估时，合同乙方应当如实提交课题经费开支情况报告，合同甲方进行技术评估并形成评估意见。</dd>
+                                    <dd>11.合同评估通过后，合同乙方应在30个工作日内向合同甲方归档资料，合同甲方在确认资料归档完成后，出具合同评估证书。</dd>
+                                    <dt>（五）合同甲方提前终止合同</dt>
+                                    <dd>12.发生下列情况之一，致使合同无法履行或不必要履行的，合同甲方可以提前终止合同，并提出处理意见：
+                                        <ol>
+                                            <li>合同所依据的研究任务被撤销的；</li>
+                                            <li>合同研究的关键技术已经公开或者通过其他途径获得，继续履行合同没有必要的；</li>
+                                            <li>履约期间因出现无法克服的技术困难的</li>
+                                            <li>合同履行条件发生重大变化，无法履行合同主要条款的</li>
+                                            <li>发生影响合同履行的不可抗拒力事件的</li>
+                                            <li>合同乙方或课题负责人被列入科技信用黑名单的</li>
+                                        </ol></dd>
+                                    <dt>（六）合同违约</dt>
+                                    <dd>13.合同一方违反合同约定，导致合同未能履行或者未能完全履行的，视为该合同方违约。</dd>
+                                    <dd>14.合同未能通过合同甲方评估的，视为合同乙方违约</dd>
+                                    <dd>15.下列情况虽未实现合同目标但不视为违约：
+                                        <ol>
+                                            <li>合同约定的目标具有足够挑战性，且合同乙方能够举证其已履行勤勉义务；</li>
+                                            <li>合同履行过程记录可以证明，合同签订时受限于客观原因，存在认识不到的科学技术问题；</li>
+                                            <li>合同执行过程中遭遇不可抗拒因素的直接影响</li>
+                                            <li>合同取得了约定之外的重要创新成果</li>
+                                        </ol></dd>
+                                    <dt>（七）违约责任</dt>
+                                    <dd>16.因合同乙方违约导致合同终止，合同甲方对合同乙方提交的经费决算进行核实，收回剩余经费；若合同乙方未实际履行合同约定义务，合同甲方收回拨付的全部经费</dd>
+                                    <dd>17.因合同甲方违约导致合同终止，合同缔约各方共同组织对合同进行经费决算、清算，合同甲方应当补偿终止合同给合同乙方造成的直接损失。</dd>
+                                    <dd>18.合同缔约各方的违约行为将被记入国防科技信用档案,情节严重的将被列入信用黑名单</dd>
+                                    <dt>（八）保密责任</dt>
+                                    <dd>19.合同缔约各方均应遵照国家和军队有关保密规定要求，认真履行保密义务。</dd>
+                                    <dd>20.合同乙方根据课题来源情况等提出密级及保密期限建议，合同甲方审核确认</dd>
+                                    <dd>21.合同乙方应当按照有关保密规定，对课题研究人员在参加国内外学术交流活动（包括讲学、访问、参加会议、参观、咨询、通信等）中有关保密问题进行明确规定并监督执行</dd>
+                                    <dt>（九）经费管理</dt>
+                                    <dd>22.合同履行期间，预算调整按照国家和军队有关规定执行</dd>
+                                    <dd>23.合同中约定的经费拨付节点，无对应研究进度节点的，按约定时间拨付经费；有对应研究进度节点的，在节点评估通过后10个工作日内拨付经费</dd>
+                                    <dd>24.完成合同任务目标并通过评估后2年内，合同乙方将结余经费统筹用于前沿科技领域创新研究的直接支出，并每6个月向合同甲方提交研究进展及经费使用情况；2年后未使用完的，合同乙方应将结余经费按经费拨付渠道退回</dd>
+                                    <dd>25.由合同甲方提前终止的合同，经合同甲方组织合同经费清算后，收回未开支经费，停拨合同余款</dd>
+                                    <dt>（十）争议解决</dt>
+                                    <dd>26.若发生合同争议，合同缔约各方应以国防科技创新发展为重，本着有利于推进科研项目的原则协商解决，不能协商解决的，由上级行政主管部门调解。</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!--附加条款-->
+                        <div id="additionalTerms" class="con_text">
+                            <h4 class="toggle">&#8226;&#160;附加条款<span class="arrow" data-flag="up">&#9650;</span></h4>
+                            <div class="text">
+                                <p>经专家组认定本合同内容密级是公开。</p>
+                                <p>专家组同意承担单位于2017年3月开始合同研究工作，理由是2017年2月研究内容及研究目标以基本确立、研究方案确认可行，目前已完成搜索框架的构建，正在进行实体知识库构建。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-btn">
+            <div class="menu" >目录</div>
+            <div class="menu-list hide">
+                <ul class="">
+                    <li>
+                        <a href="#basic_info" style="font-weight: bold;">基本信息</a>
+                    </li>
+                    <li>
+                        <a href="#partAB" style="font-weight: bold;">合同甲乙方</a>
+                        <ul class="subMenu">
+                            <li>
+                                <a href="#researchTarget">研究目标</a>
+                            </li>
+                            <li>
+                                <a href="#researchContent">研究内容</a>
+                            </li>
+                            <li>
+                                <a href="#techRequest">技术要求</a>
+                            </li>
+                            <li>
+                                <a href="#mainIndicator">主要指标</a>
+                            </li>
+                            <li>
+                                <a href="#researchSchedule">研究进度</a>
+                            </li>
+                            <li>
+                                <a href="#submitRequest">提交要求</a>
+                            </li>
+                            <li>
+                                <a href="#researchStaff">研究人员</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#funds" style="font-weight: bold;">合同经费</a>
+                        <ul class="subMenu">
+                            <li>
+                                <a href="#fundsBudget">经费预算</a>
+                            </li>
+                            <li>
+                                <a href="#fundsUse">经费使用事项</a>
+                            </li>
+                            <li>
+                                <a href="#fundsAppropriation">经费拨付</a>
+                            </li>
+                            <li>
+                                <a href="#conditionAppropriation">条件拨付</a>
+                            </li>
+                            <li>
+                                <a href="#relatedExplanation">有关说明</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#terms" style="font-weight: bold;">合同条款</a>
+                        <ul class="subMenu">
+                            <li>
+                                <a href="#commonTerms">共同条款</a>
+                            </li>
+                            <li>
+                                <a href="#additionalTerms">附加条款</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="full-text">查看<br>全文</div>
+            <div class="goTop">&#10152;</div>
+        </div>
+
+    </div>
+</div>
+
+<!--main结束-->
+<!--footer开始-->
+<div id="footer">
+    <div class="inner">
+        <div class="footerLfet fl">
+            <a href="javascript:void(0);"><span style="color: white"><img src="../images/11.png" style="width: 100px;height: 50px;"></span></a>
+        </div>
+        <div class="footerMid fl">
+            <p>版权所有 中国电子科技集团公司第十五研究所 </p>
+            <p>地址：北京市海淀区北四环中路211号华北科技大厦15层 邮编：100083</p>
+            <!--<p><img src="../images/logo_15.png" alt=""> 京ICP备10011865号-1 京公网安备11010502022735 咨询电话：010-89055055 官方邮箱：info@cjbdi.com</p>-->
+        </div>
+        <!--<div class="footerRig fr">-->
+        <!--<img src="../images/QRcode.jpg" alt="">-->
+        <!--<p>研究院微信公众号</p>-->
+        <!--</div>-->
+
+    </div>
+</div>
+<!--footer结束-->
+<script src="../js/jquery/jquery-2.1.1-min.js"></script>
+<!--[if lte IE 8]>
+<script src="../js/jquery/jquery.min.js"></script>
+<script src="../js/es5-shim-master/es5-shim.js"></script>
+<script src="../js/es5-shim-master/es5-sham.js"></script>
+<script src="../js/html5shiv.js"></script>
+<script src="../js/json2.js"></script>
+<![endif]-->
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/md5.js"></script>
+
+</body>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        //获取文档题目
+        var contractName = GetQueryString('name');
+        $(".docTitle >h2").html(contractName);
+
+
+
+        //高亮显示关键字
+        var key1 = keyLight('main', GetQueryString('key'));
+
+
+
+        //    人员分布图
+        var personChart = echarts.init(document.getElementById('personChart'));
+        var personChartOption = {
+            title : {
+                text: '研究人员职称分布',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                right: 5,
+                top: 100,
+                data: ['研究员','高工','工程师','其他']
+            },
+            series : [
+                {
+                    name: '职称',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['40%', '60%'],
+                    data:[
+                        {value:8, name:'研究员'},
+                        {value:25, name:'高工'},
+                        {value:42, name:'工程师'},
+                        {value:25, name:'其他'},
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        personChart.setOption(personChartOption);
+
+//    经费图
+        var fundsChart = echarts.init(document.getElementById('fundsChart'));
+        var fundsChartOption = {
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                top: '5%',
+                left: '8%',
+                right: '4%',
+                bottom: '20%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['设备费', '材料费', '测试化验加工费', '燃料动力费', '出版/文献费', '会议/差旅费', '劳务费', '专家咨询费', '其他支出', '间接费用'],
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    axisLabel: {
+                        interval: 0,
+                        rotate: 45,
+                    },
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    name: '单位：万元',
+                    nameLocation: 'middle',
+                    nameRotate: 90,
+                    nameGap: 35,
+
+                }
+            ],
+            series : [
+                {
+                    name:'费用',
+                    type:'bar',
+                    barWidth: '60%',
+                    data:[67.64, 20, 0, 3.2, 9.6, 15.78, 11.62, 3.76, 7, 11.4],
+                    itemStyle: {
+                        normal:{
+                            //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
+                            color: function (params){
+                                var colorList = ['#3577F5','#3577f5','#3577f5','#3577f5', '#3577f5','#3577f5','#3577f5','#3577f5', '#3577f5', '#F58C40'];
+                                return colorList[params.dataIndex];
+                            }
+                        },
+
+                    },
+
+
+                }
+            ]
+        };
+        fundsChart.setOption(fundsChartOption);
+
+        //    时间轴
+
+        //上面的字下移
+        var timeLength = $('.time-box li').length;
+        var timeliWidth = $('.time-box li').outerWidth();
+
+        for (var i = 0; i < timeLength; i = i+2) {
+            var ele = $('.time-line .time-box ul').children('li').eq(i);
+            var marginTop = $('.time-line .time-box ul').height() / 2 - ele.height() - 51;
+            ele.css({
+                'margin-top': marginTop
+            });
+        }
+
+        //左右滑动
+        var index = 0;
+
+        $('.time-box ul').width(timeLength * timeliWidth);
+
+        $('.right-arrow').click(function() {
+            index = index >= (timeLength-4) ? 0 : index + 1;
+            slideOne(index);
+        });
+
+        $('.left-arrow').click(function() {
+            index = index <= 0 ? (timeLength-4) : index - 1;
+            slideOne(index);
+        });
+
+        //    目录
+        $(".menu").click(function(){
+            if ($('.menu-list').hasClass('hide')) {
+                $('.menu-list').removeClass('hide');
+                $(this).css({
+                    'background-color':'#3687ff',
+                    'color': '#fff',
+                });
+
+            } else {
+                $('.menu-list').addClass('hide');
+                $(this).css({
+                    'background-color':'#fff',
+                    'color': '#999',
+                });
+            }
+        });
+
+        //    回到顶部
+        $(".goTop").click(function(){
+            scrollTo(0,0);
+        });
+
+        //    折叠展开，箭头翻转
+        $(".toggle").click(function(){
+            if ($(this).children('.arrow').attr('data-flag') === 'up') {
+
+                $(this).children('.arrow').html('&#9660;').attr('data-flag', 'down');
+                $(this).next().slideToggle(500);
+
+            } else if ($(this).children('.arrow').attr('data-flag') === 'down') {
+
+                $(this).children('.arrow').html('&#9650;').attr('data-flag', 'up');
+                $(this).next().slideToggle(500);
+            }
+        });
+
+        //    提示框
+        $('.tips').on({
+            mouseover : function(){
+                $(this).next('.tip-text').css({
+                    'position': 'absolute',
+                    'left': $(this).offsetLeft,
+                    'top': $(this).offsetTop,
+                }).removeClass('hide');
+            } ,
+            mouseout : function(){
+                $(this).next('.tip-text').addClass('hide');
+            }
+        }) ;
+
+
+
+    });
+
+
+
+/*    function divClick(){
+        if ($('.menu-list').hasClass('hide')) {
+            $('.menu-list').removeClass('hide');
+            $(this).css({
+                'background-color':'#3687ff',
+                'color': '#fff',
+            });
+
+        } else {
+            $('.menu-list').addClass('hide');
+            $(this).css({
+                'background-color':'#fff',
+                'color': '#999',
+            });
+        }
+    }*/
+    //    获取参数函数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if(r != null) return decodeURI(r[2]);
+        return null;
+    }
+
+    //高亮显示关键字函数
+    function keyLight(id, key, bgColor){
+        var oDiv = document.getElementById(id);
+        var sText = oDiv.innerHTML;
+        var personChart = document.getElementById('personChart');
+        var personChartText = personChart.outerHTML;
+        var fundsChart = document.getElementById('fundsChart');
+        var fundsChartText = fundsChart.outerHTML;
+        var str1 = sText.split(personChartText);
+        var str2 = str1[1].split(fundsChartText);
+
+        var bgColor = bgColor || "yellow";
+        var sKey = "<span style='background-color: "+bgColor+";'>"+key+"</span>";
+
+        var rStr = new RegExp(key, "g");
+        var rHtml = new RegExp("\<.*?\>","ig"); //匹配html元素
+
+        var aHtml1 = str1[0].match(rHtml); //存放html元素的数组
+        var num1 = -1;
+        str1[0] = str1[0].replace(rHtml, '{~}');  //替换html标签
+        str1[0] = str1[0].replace(rStr,sKey); //替换key
+        str1[0] = str1[0].replace(/{~}/g,function(){  //恢复html标签
+            num1++;
+            return aHtml1[num1];
+        });
+
+        var aHtml2 = str2[0].match(rHtml); //存放html元素的数组
+        var num2 = -1;
+        str2[0] = str2[0].replace(rHtml, '{~}');  //替换html标签
+        str2[0] = str2[0].replace(rStr,sKey); //替换key
+        str2[0] = str2[0].replace(/{~}/g,function(){  //恢复html标签
+            num2++;
+            return aHtml2[num2];
+        });
+
+        var aHtml3 = str2[1].match(rHtml); //存放html元素的数组
+        var num3 = -1;
+        str2[1] = str2[1].replace(rHtml, '{~}');  //替换html标签
+        str2[1] = str2[1].replace(rStr,sKey); //替换key
+        str2[1] = str2[1].replace(/{~}/g,function(){  //恢复html标签
+            num3++;
+            return aHtml3[num3];
+        });
+
+        sText = str1[0]+personChartText+str2[0]+fundsChartText+str2[1];
+        oDiv.innerHTML = sText;
+    }
+
+    //左右滑动
+    function slideOne(i) {
+        var timeliWidth = $('.time-box li').outerWidth();
+        var scrollVal = i * timeliWidth; //每次切换的数量
+        $('.time-box').stop().animate({
+            scrollLeft: scrollVal
+        }, 300);
+    }
+
+
+
+</script>
+
+</html>

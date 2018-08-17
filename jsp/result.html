@@ -1,0 +1,670 @@
+<!DOCTYPE  html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>创新特区合同智能检索</title>
+    <link rel="stylesheet" href="../resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/result.css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+
+<body>
+    <!--header部分开始-->
+    <div id="header">
+        <div class="inner">
+            <!--logo-->
+            <!--logo-->
+            <a href="index.html" class="fl logo"><img src="../images/hetong1.png" height="40px" style="vertical-align: bottom;
+    margin-bottom: -5px;">
+                <span style="color: white;line-height: 36px;font-size: 26px;">XX智能检索系统</span></a>
+            <!--搜索-->
+            <!--<div class="searchBox fl">-->
+                <!--<div class="searchLeft fl">-->
+                    <!--<div class="search_select">-->
+                        <!--<span>合同查询</span>-->
+                        <!--<i class="fa fa-angle-down fa-lg" style="margin-left: 6px;"></i>-->
+                        <!--<div class="search_menu hide">-->
+                            <!--<ul>-->
+                                <!--<li><a href="javascript:void(0);">合同查询</a></li>-->
+                                <!--<li><a href="javascript:void(0);">构想查重</a></li>-->
+                                <!--<li><a href="javascript:void(0);">人员/机构搜素</a></li>-->
+                                <!--&lt;!&ndash;<li><a href="javascript:void(0);">本院查明</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li><a href="javascript:void(0);">当事人</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li><a href="javascript:void(0);">审理经过</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li><a href="javascript:void(0);">诉称</a></li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li><a href="javascript:void(0);">辩称</a></li>&ndash;&gt;-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="searchMid fl">-->
+                    <!--<span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 15px; z-index: 2; line-height: 35px">请输入关键词</span>-->
+                    <!--<input type="text" class="search_ipt">-->
+                    <!--<div class="dropDown_box hide">-->
+                        <!--<div class="mask_drow">-->
+                            <!--<ul>-->
+                                <!--&lt;!&ndash;最多显示十条&ndash;&gt;-->
+                                <!--&lt;!&ndash; <li><span>案由</span><a href="javascript:void(0);"></a></li>-->
+                            <!--<li><span>案情特征</span><a href="javascript:void(0);"></a></li>-->
+                            <!--<li><span>当事人</span><a href="javascript:void(0);"></a></li>-->
+                            <!--<li><span>律师</span><a href="javascript:void(0);"></a></li>-->
+                            <!--<li><span>法官</span><a href="javascript:void(0);"></a></li> &ndash;&gt;-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="searchRig fl">-->
+                    <!--<input class="search_glass" type="button" value="">-->
+                    <!--<input class="result_search" type="button" value="在结果中搜索">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--注册&登录-->
+            <div class="login fr">
+                <a href="./register.html" class="registerA">注册</a>
+                <a href="javascript:void (0);" class="loginA">登录</a>
+            </div>
+            <!-- 当前用户 -->
+            <div id="currentUser" class="currentUser fr">
+                <a href="javascript:void(0);" class="curUser">
+                <span class="uname">当前用户</span>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-chevron-up hide"></i>
+            </a>
+                <ul>
+                    <li><a href="./myCollects.html" class="headerDropItem">我的收藏</a></li>
+                    <li><a href="./myDownload.html" class="headerDropItem">我的下载</a></li>
+                    <li><a href="./settings.html" class="headerDropItem">账号设置</a></li>
+                    <li class="logout"><a href="javascript:void(0);" class="headerDropItem">退出</a></li>
+                </ul>
+            </div>
+            <!-- 手册 -->
+            <!--<div class="fr">-->
+                <!--<a id="userManual" href="#" style="color: #fff;height: 60px;line-height: 60px;display: inline-block;font-size: 12px;padding: 0 10px;">用户手册</a><i style="margin: 0 10px;font-style: normal;color: #fff;">|</i>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--header部分结束-->
+    <!-- 登录框开始 -->
+    <div class="mask hide"></div>
+    <div class="hideLogin login_box hide">
+        <ul class="clearfix">
+            <li class="login_num current">
+                <h3 class="login_title">账号登录</h3>
+            </li>
+            <!-- <li class="login_sweep">
+            <h3 class="login_title">扫码登录</h3>
+        </li> -->
+        </ul>
+        <div class="login_cont">
+            <!--账号登录-->
+            <div class="loginNum_box">
+                <div class="loginTip">用户名或密码不匹配，请重新输入</div>
+                <div class="login_item userName_box">
+                    <div class="input_box">
+                        <label for="userName"><i></i></label>
+                        <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2; line-height: 40px;left:50px;">请输入用户名</span>
+                        <input type="text" id="userName" name="user_name">
+                        <i class="i_status fa fa-check-circle"></i>
+                    </div>
+                    <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i><span>用户名或密码不匹配，请重新输入</span> </p>
+                </div>
+                <div class="login_item">
+                    <div class="input_box userPwd_box">
+                        <label for="userPwd"><i></i></label>
+                        <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 10px; z-index: 2; line-height: 40px;left:50px;">请输入密码</span>
+                        <input type="password" id="userPwd" name="user_pwd">
+                        <i class="i_status fa fa-check-circle"></i>
+                    </div>
+                    <p class="hints_login"> <i class="fa fa-minus-circle" aria-hidden="true"></i> <span>用户名或密码不匹配，请重新输入</span></p>
+                </div>
+                <input type="button" value="登 录" id="loginBtn" class="login_btn">
+                <p style="float: left;">没有账号?<a href="./register.html" class="register_btn">立即注册</a></p>
+                <a href="./changePwd.html" class="forget_btn fr">忘记密码</a>
+            </div>
+            <!--扫码登录-->
+            <!-- <div class="loginSweep_box hide">
+            <p class="hints_qr"> <i class="fa fa-minus-circle" aria-hidden="true"></i> 二维码已失效，点击刷新</p>
+            <div class="qrcodeImg_box">
+                <img src="../images/QRcode.jpg" alt="" class="qrcodeImg">
+            </div>
+        </div> -->
+        </div>
+        <a href="javascript:void (0)" class="closeBtn">
+            <!-- <i class="fa fa-close"></i> -->
+            ×
+        </a>
+    </div>
+    <!-- 登录框结束 -->
+    <!--main部分开始-->
+    <div id="main">
+        <div class="inner" style="height: 55px;">
+            <div class="search_contact" style="display: inline;margin-left: 50px;">
+                创新特区合同智能查询
+            </div>
+
+
+            <div class="searchBox fl" style="float: right;display: inline;margin-right: 15%;">
+                <div class="searchLeft fl">
+                    <div class="search_select">
+                        <span>名称</span>
+                        <i class="fa fa-angle-down fa-lg" style="margin-left: 6px;"></i>
+                        <div class="search_menu hide">
+                            <ul>
+                                <li><a href="javascript:void(0);">名称</a></li>
+                                <li><a href="javascript:void(0);">编号</a></li>
+                                <li><a href="javascript:void(0);">负责人</a></li>
+                                <li><a href="javascript:void(0);">单位</a></li>
+                                <li><a href="javascript:void(0);">全文内容</a></li>
+                                <!--<li><a href="javascript:void(0);">当事人</a></li>-->
+                                <!--<li><a href="javascript:void(0);">审理经过</a></li>-->
+                                <!--<li><a href="javascript:void(0);">诉称</a></li>-->
+                                <!--<li><a href="javascript:void(0);">辩称</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchMid fl">
+                    <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 15px; z-index: 2; line-height: 35px">请输入查询条件</span>
+                    <input type="text" class="search_ipt">
+                    <div class="dropDown_box hide">
+                        <div class="mask_drow">
+                            <ul>
+                                <!--最多显示十条-->
+                                <!-- <li><span>案由</span><a href="javascript:void(0);"></a></li>
+                            <li><span>案情特征</span><a href="javascript:void(0);"></a></li>
+                            <li><span>当事人</span><a href="javascript:void(0);"></a></li>
+                            <li><span>律师</span><a href="javascript:void(0);"></a></li>
+                            <li><span>法官</span><a href="javascript:void(0);"></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchRig fl">
+                    <input class="search_glass" type="button" value="">
+                    <input class="result_search" type="button" value="在结果中搜索">
+                </div>
+            </div>
+        </div>
+
+
+        <!--搜索条件-->
+        <div class="search_condition clearfix" style="padding-left: 50px;padding-top: 8px;">
+            <div class="inner">
+                <div class="entry">
+                    <div class="crumbs fl">
+                        <a href="javascript:void(0);">已选条件：</a><span></span>
+                    </div>
+                    <div class="selectedObj1 fl">
+                        <span class="casecause_tag" title="合同内容：XXX">合同内容：XXX<i class="fa fa-times mar_l"></i>
+                        </span>
+                    </div>
+                   <!-- <div class="selectedObj fl">
+                        <span class="casecause_tag" title="密级：XX">密级：XX<i class="fa fa-times mar_l"></i>
+                        </span>
+                    </div>
+                    <div class="selectedObj fl">
+                        <span class="casecause_tag" title="合同价款：XXX">合同价款：XXX<i class="fa fa-times mar_l"></i>
+                        </span>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!--搜索历史-->
+        <!--<div class="search_condition clearfix" style="padding-left: 50px;padding-top: 0px;">-->
+            <!--<div class="inner">-->
+                <!--<div class="entry">-->
+                    <!--<div class="crumbs fl">-->
+                        <!--<a href="javascript:void(0);">检索历史：</a><span></span>-->
+                    <!--</div>-->
+                    <!--<div class="selectedObj fl">-->
+                        <!--<span class="casecause_tag" title="合同名称：XXX">合同名称：XXX<i class="fa fa-times mar_l"></i>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="selectedObj fl">-->
+                        <!--<span class="casecause_tag" title="合同名称：XXX">合同名称：XXX<i class="fa fa-times mar_l"></i>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                    <!--<div class="selectedObj fl">-->
+                        <!--<span class="casecause_tag" title="合同名称：XXX">合同名称：XXX<i class="fa fa-times mar_l"></i>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--主体-->
+        <div class="main clearfix">
+            <div class="inner">
+                <!--左边导航栏-->
+                <div class="navs fl">
+                    <ul>
+                        <li class="nav active0" id="nav_case_feature">
+                            <a href="javascript:void(0)">
+                                <span class="icon_filed icon"></span>
+                                <span class="lp_2">所属领域</span>
+                                <span class="nav_corner"><i class="fa fa-angle-up fa-lg"></i></span>
+                            </a>
+                            <div class="items">
+                                <ul class="slide">
+                                    <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域1" >领域1</a></li>
+                                    <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域2">领域2（23）</a></li>
+                                    <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域3">领域3（25）</a></li>
+                                    <div style="display: none">
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域4">领域4（1）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域5">领域5（3）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域6">领域6（2）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域7">领域7（2）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域8">领域8（1）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域9">领域9（3）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域10">领域10（2）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域11">领域11（2）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域12">领域12（1）</a></li>
+                                        <li class="nav_li domain" name="case_feature"><a href="javascript:void(0);" title="请求领域13">领域13（3）</a></li>
+                                    </div>
+                                </ul>
+                                <span class="foldBtn nav_foldBtn">更多</span>
+                            </div>
+                        </li>
+                        <li class="active0">
+                            <a href="javascript:void(0)">
+                                <span class="icon_security icon"></span>
+                                <span class="lp_2">密级</span>
+                                <span class="nav_corner"><i class="fa fa-angle-up fa-lg"></i></span>
+                            </a>
+                            <div class="items">
+                                <ul>
+                                    <li class="nav_li level" name="case_feature"><a href="javascript:void(0);" title="请求公开">公开（1）</a></li>
+                                    <li class="nav_li level" name="case_feature"><a href="javascript:void(0);" title="请求MM">MM（3）</a></li>
+                                    <li class="nav_li level" name="case_feature"><a href="javascript:void(0);" title="请求JM">JM（4）</a></li>
+                                    <li class="nav_li level" name="case_feature"><a href="javascript:void(0);" title="请求其他">其他（33）</a></li>
+                                </ul>
+                                <!--<span class="foldBtn nav_foldBtn">更多</span>-->
+                            </div>
+                        </li>
+                        <li class="active0">
+                            <a href="javascript:void(0)">
+                                <span class="icon_starttime icon"></span>
+                                <span class="lp_2">启动时间</span>
+                                <span class="nav_corner"><i class="fa fa-angle-up fa-lg"></i></span>
+                            </a>
+                            <div class="items">
+                                <ul>
+                                    <li class="nav_li startDate" name="case_feature"><a href="javascript:void(0);" title="请求2018年">2018年（35）</a></li>
+                                    <li class="nav_li startDate" name="case_feature"><a href="javascript:void(0);" title="请求2017年">2017年（11）</a></li>
+                                    <li class="nav_li startDate" name="case_feature"><a href="javascript:void(0);" title="请求2016年">2016年（19）</a></li>
+                                </ul>
+                                <!--<span class="foldBtn nav_foldBtn">更多</span>-->
+                            </div>
+                        </li>
+                        <li >
+                            <a href="javascript:void(0)">
+                                <span class="icon_price icon"></span>
+                                <span class="lp_2">合同价款</span>
+                                <span class="nav_corner"><i class="fa fa-angle-up fa-lg"></i></span>
+                            </a>
+                            <div class="items">
+                                <ul>
+                                    <li class="nav_li price" name="case_feature"><a href="javascript:void(0);" title="请求0-100万">0-100万（35）</a></li>
+                                    <li class="nav_li price" name="case_feature"><a href="javascript:void(0);" title="请求100-300万">100-300万（11）</a></li>
+                                    <li class="nav_li price" name="case_feature"><a href="javascript:void(0);" title="请求300-500万">300-500万（19）</a></li>
+                                    <!--<li class="nav_li" name="case_feature"><a href="javascript:void(0);" title="请求">领域4（17）</a></li>-->
+                                    <div style="display:none">
+                                        <li class="nav_li price" name="case_feature"><a href="javascript:void(0);" title="请求300-500万">500-1000万（1）</a></li>
+                                        <li class="nav_li price" name="case_feature"><a href="javascript:void(0);" title="请求300-500万">1000-2000万（0）</a></li>
+                                        <li class="nav_li price" name="case_feature"><a href="javascript:void(0);" title="请求300-500万">2000万以上（0）</a></li>
+                                    </div>
+                                </ul>
+                                <span class="foldBtn nav_foldBtn">更多</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--右边搜索结果展示-->
+                <div class="search_result fl">
+                    <div class="result_top clearfix">
+                        <div class="array fl" style="width: 43%;">
+                            <p class="px">排序方式：</p>
+                            <div class="ar_chose1">
+                                <div class="taga arr_chose">
+                                    <span>相关性</span><img class="array_up " src="../images/ico_down_s.png">
+                                </div>
+                                <div class="taga">
+                                    <span>启动时间</span><img class="array_up" src="../images/ico_down.png">
+                                </div>
+                                <div class="taga">
+                                    <span>合同价款</span><img class="array_up" src="../images/ico_down.png">
+                                </div>
+                            </div>
+                            <!--<p class="fl" style="color: #b3b3b3">|</p>-->
+                        </div>
+                        <p class="js_number fl" style="float: right">共检索到&nbsp;<span class="blues">3</span>&nbsp;篇合同</p>
+                    </div>
+                    <!--<div class="result_box">-->
+
+                        <!--<div class="result_item" id="item_0">-->
+                            <!--<div class="result_item_title">-->
+                                <!--&lt;!&ndash;<span class="referencetype_g">合同名称</span>&ndash;&gt;-->
+                                <!--<h4 title="合同名称">面向领域的精准搜索技术</h4>-->
+                                <!--<div style="display: inline-block;float: right;font-size: 16px;margin-right: 40px;">-->
+                                    <!--<span class="security" style="margin-right: 20px;">密级</span>-->
+                                    <!--&lt;!&ndash;<span class="security">状态</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="result_item_keywords">-->
+                                    <!--<span>17-H863-01-ZT-005-018-01</span>-->
+                                    <!--<span>李常宝</span>-->
+                                    <!--<span>中国电子科技集团公司第十五研究所</span>-->
+                                    <!--<span>2017.03.31-2018.03.31</span>-->
+                                    <!--<span>150万</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="result_item_txt">-->
+                                <!--<div class="result_item_tabs clearfix">-->
+                                    <!--<ul>-->
+                                        <!--<li id="court_consider" class="tab_chose">合同摘要</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="result_item_cont cont_select" id="court_consider">-->
+                                    <!--<p>本合同签订的甲乙双方分别为国防科技项目管理中心（筹）和中国电子科技集团公司第十五研究所。本合同针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑。本合同的主要研究内容为模型驱动的领域知识库构建技术、模型驱动的领域知识库构建技术和基于业务需求画像的个性化排序技术。</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="dowd_num">1</div>-->
+                        <!--</div>-->
+                        <!--<div class="result_item" id="item_0">-->
+                            <!--<div class="result_item_title">-->
+                                <!--&lt;!&ndash;<span class="referencetype_g">合同名称</span>&ndash;&gt;-->
+                                <!--<h4 title="合同名称">面向领域的精准搜索技术</h4>-->
+                                <!--<div style="display: inline-block;float: right;font-size: 16px;margin-right: 40px;">-->
+                                    <!--<span class="security" style="margin-right: 20px;">密级</span>-->
+                                    <!--&lt;!&ndash;<span class="security">状态</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="result_item_keywords">-->
+                                    <!--<span>17-H863-01-ZT-005-018-01</span>-->
+                                    <!--<span>李常宝</span>-->
+                                    <!--<span>中国电子科技集团公司第十五研究所</span>-->
+                                    <!--<span>2017.03.31-2018.03.31</span>-->
+                                    <!--<span>150万</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="result_item_txt">-->
+                                <!--<div class="result_item_tabs clearfix">-->
+                                    <!--<ul>-->
+                                        <!--<li id="court_consider" class="tab_chose">合同摘要</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="result_item_cont cont_select" id="court_consider">-->
+                                    <!--<p>本合同签订的甲乙双方分别为国防科技项目管理中心（筹）和中国电子科技集团公司第十五研究所。本合同针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑。本合同的主要研究内容为模型驱动的领域知识库构建技术、模型驱动的领域知识库构建技术和基于业务需求画像的个性化排序技术。</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="dowd_num">2</div>-->
+                        <!--</div>-->
+                        <!--<div class="result_item" id="item_0">-->
+                            <!--<div class="result_item_title">-->
+                                <!--&lt;!&ndash;<span class="referencetype_g">合同名称</span>&ndash;&gt;-->
+                                <!--<h4 title="合同名称">面向领域的精准搜索技术</h4>-->
+                                <!--<div style="display: inline-block;float: right;font-size: 16px;margin-right: 40px;">-->
+                                    <!--<span class="security" style="margin-right: 20px;">密级</span>-->
+                                    <!--&lt;!&ndash;<span class="security">状态</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="result_item_keywords">-->
+                                    <!--<span>17-H863-01-ZT-005-018-01</span>-->
+                                    <!--<span>李常宝</span>-->
+                                    <!--<span>中国电子科技集团公司第十五研究所</span>-->
+                                    <!--<span>2017.03.31-2018.03.31</span>-->
+                                    <!--<span>150万</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="result_item_txt">-->
+                                <!--<div class="result_item_tabs clearfix">-->
+                                    <!--<ul>-->
+                                        <!--<li id="court_consider" class="tab_chose">合同摘要</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="result_item_cont cont_select" id="court_consider">-->
+                                    <!--<p>本合同签订的甲乙双方分别为国防科技项目管理中心（筹）和中国电子科技集团公司第十五研究所。本合同针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑。本合同的主要研究内容为模型驱动的领域知识库构建技术、模型驱动的领域知识库构建技术和基于业务需求画像的个性化排序技术。</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="dowd_num">3</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+
+                    <div class="result_box1">
+
+                        <!--<div class="result_item" id="item_0">-->
+                            <!--<div class="result_item_title">-->
+                                <!--&lt;!&ndash;<span class="referencetype_g">合同名称</span>&ndash;&gt;-->
+                                <!--<h4 title="合同名称">data.name</h4>-->
+                                <!--<div style="display: inline-block;float: right;font-size: 16px;margin-right: 40px;">-->
+                                    <!--<span class="security" style="margin-right: 20px;">密级</span>-->
+                                    <!--&lt;!&ndash;<span class="security">状态</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="result_item_keywords">-->
+                                    <!--<span>17-H863-01-ZT-005-018-01</span>-->
+                                    <!--<span>李常宝</span>-->
+                                    <!--<span>中国电子科技集团公司第十五研究所</span>-->
+                                    <!--<span>2017.03.31-2018.03.31</span>-->
+                                    <!--<span>150万</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="result_item_txt">-->
+                                <!--<div class="result_item_tabs clearfix">-->
+                                    <!--<ul>-->
+                                        <!--<li id="court_consider" class="tab_chose">合同摘要</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="result_item_cont cont_select" id="court_consider">-->
+                                    <!--<p>本合同签订的甲乙双方分别为国防科技项目管理中心（筹）和中国电子科技集团公司第十五研究所。本合同针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑。本合同的主要研究内容为模型驱动的领域知识库构建技术、模型驱动的领域知识库构建技术和基于业务需求画像的个性化排序技术。</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="dowd_num">1</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="result_item" id="item_0">-->
+                            <!--<div class="result_item_title">-->
+                                <!--&lt;!&ndash;<span class="referencetype_g">合同名称</span>&ndash;&gt;-->
+                                <!--<h4 title="合同名称">面向领域的精准搜索技术</h4>-->
+                                <!--<div style="display: inline-block;float: right;font-size: 16px;margin-right: 40px;">-->
+                                    <!--<span class="security" style="margin-right: 20px;">密级</span>-->
+                                    <!--&lt;!&ndash;<span class="security">状态</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="result_item_keywords">-->
+                                    <!--<span>17-H863-01-ZT-005-018-01</span>-->
+                                    <!--<span>李常宝</span>-->
+                                    <!--<span>中国电子科技集团公司第十五研究所</span>-->
+                                    <!--<span>2017.03.31-2018.03.31</span>-->
+                                    <!--<span>150万</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="result_item_txt">-->
+                                <!--<div class="result_item_tabs clearfix">-->
+                                    <!--<ul>-->
+                                        <!--<li id="court_consider" class="tab_chose">合同摘要</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="result_item_cont cont_select" id="court_consider">-->
+                                    <!--<p>本合同签订的甲乙双方分别为国防科技项目管理中心（筹）和中国电子科技集团公司第十五研究所。本合同针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑。本合同的主要研究内容为模型驱动的领域知识库构建技术、模型驱动的领域知识库构建技术和基于业务需求画像的个性化排序技术。</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="dowd_num">2</div>-->
+                        <!--</div>-->
+                        <!--<div class="result_item" id="item_0">-->
+                            <!--<div class="result_item_title">-->
+                                <!--&lt;!&ndash;<span class="referencetype_g">合同名称</span>&ndash;&gt;-->
+                                <!--<h4 title="合同名称">面向领域的精准搜索技术</h4>-->
+                                <!--<div style="display: inline-block;float: right;font-size: 16px;margin-right: 40px;">-->
+                                    <!--<span class="security" style="margin-right: 20px;">密级</span>-->
+                                    <!--&lt;!&ndash;<span class="security">状态</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="result_item_keywords">-->
+                                    <!--<span>17-H863-01-ZT-005-018-01</span>-->
+                                    <!--<span>李常宝</span>-->
+                                    <!--<span>中国电子科技集团公司第十五研究所</span>-->
+                                    <!--<span>2017.03.31-2018.03.31</span>-->
+                                    <!--<span>150万</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="result_item_txt">-->
+                                <!--<div class="result_item_tabs clearfix">-->
+                                    <!--<ul>-->
+                                        <!--<li id="court_consider" class="tab_chose">合同摘要</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="result_item_cont cont_select" id="court_consider">-->
+                                    <!--<p>本合同签订的甲乙双方分别为国防科技项目管理中心（筹）和中国电子科技集团公司第十五研究所。本合同针对非互联网领域信息检索过程中存在的语义理解能力弱、搜索精准性不足的问题，以实现领域大数据精准搜索能力的快速构建为目标，开展面向领域的精准搜索技术研究，突破领域大数据的知识表示与抽取、多态query语义理解、支持领域语义的搜索相关性计算、基于业务需求画像的个性化排序等领域精准搜索面临的核心能力瓶颈，提供领域语义智能理解能力，能够动态接入指定领域的数据源，并自动建立精准语义搜索能力，为军事科技情报的智能搜索提供技术支撑。本合同的主要研究内容为模型驱动的领域知识库构建技术、模型驱动的领域知识库构建技术和基于业务需求画像的个性化排序技术。</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="dowd_num">3</div>-->
+                        <!--</div>-->
+                    </div>
+                    <!--分页-->
+                </div>
+
+            <div class="png hide">
+                <img src="../images/back.png" alt="" />
+                <span>抱歉，没有搜到结果，请更换条件重新搜索</span>
+            </div>
+        </div>
+    </div>
+    <!--main部分结束-
+    <!--footer开始-->
+    <div id="footer">
+        <div class="inner">
+            <div class="footerLfet fl">
+                <a href="javascript:void(0);"><span style="color: white"><img src="../images/11.png" style="width: 100px;height: 50px;"></span></a>
+            </div>
+            <div class="footerMid fl">
+                <p>版权所有 中国电子科技集团公司第十五研究所 </p>
+                <p>地址：北京市海淀区北四环中路211号华北科技大厦15层 邮编：100083</p>
+            </div>
+        </div>
+    </div>
+    <!--footer结束-->
+    <!--悬浮框-->
+    <!--<div class="help">-->
+        <!--<ul>-->
+            <!--<li class="questions"><a style="padding-top: 3px" href="./userManual.html" target="view_window">使 用 指 南</a></li>-->
+            <!--<li class="feedback"><a style="padding-top: 3px" href="./feedBack.html" target="view_window">问 题 反 馈</a></li>-->
+            <!--<li class="backTop"><a href="javascript:void (0);"></a></li>-->
+        <!--</ul>--><!-- <div class="shade" style="display: none;">
+        <div id="loading">
+            <img src="../images/loading.gif" alt="" />
+            <span>努力加载中...</span>
+        </div>
+    </div>-->
+    <!--</div>-->
+    <!-- loading遮罩 -->
+
+    <div id="iframe" name="tempiframe" style="display:none;"></div>
+    <script src="../js/jquery/jquery-2.1.1-min.js"></script>
+    <!--<script src="../js/es5-shim-master/es5-shim.min.js"></script>
+<script src="../js/es5-shim-master/es5-sham.min.js"></script>
+<script src="../js/html5shiv.js"></script>-->
+    <!--
+IE8只能支持jQuery1.9
+-->
+    <!--[if lte IE 8]>
+<script src="../js/jquery/jquery.min.js"></script>
+<script src="../js/json2.js"></script>
+<![endif]-->
+    <!--<script src="../js/jquery.cookie.js"></script>-->
+    <script src="../resources/loading/spin.min.js"></script>
+    <script src="../js/md5.js"></script>
+<!--
+    <script src="../js/store.min.js"></script>
+-->
+        <script>
+            //获取参数
+            function GetQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if(r != null) return decodeURI(r[2]);
+                return null;
+            };
+
+            $(document).ready(function () {
+                var key = GetQueryString("key");
+                console.log(key);
+                $(".selectedObj1 span").html("合同内容："+key);
+                $(".selectedObj1 span").attr('title','合同内容：'+key);
+
+
+            });
+
+//三种排序方式的点击事件实现 by LZY
+            $(".taga").click(function(){
+                $(".taga").removeClass('arr_chose');
+                $(this).addClass('arr_chose');
+                $(".taga img").attr('src','../images/ico_down.png');
+                $(this).find('img').attr('src','../images/ico_down_s.png');
+                var key = $(this).find('span').html();
+                console.log(key);
+                searchData(key);
+            });
+//左侧导航链接点击事件实现 by LZy
+            $(".nav_li").click(function (e) {
+
+
+
+                var searchTl = $(this).find('a').html();
+                var searchDomain ='';
+
+                if($(this).hasClass('domain')){
+                    searchDomain = "所属领域"
+                }
+                if($(this).hasClass('level')){
+                    searchDomain = "密级"
+                }
+                if($(this).hasClass('startDate')){
+                    searchDomain = "启动日期"
+                }
+                if($(this).hasClass('price')){
+                    searchDomain = "合同价款"
+                }
+
+                $(".selectedObj1 ").append("<span class='casecause_tag' title='"+searchTl+"'>"+searchDomain+"："+searchTl+"<i class='fa fa-times mar_l' onclick='del(this)'></i></span>");
+
+                if ($(this).hasClass('active')){
+                    $(".selectedObj1 span[title="+searchTl+"]").remove();
+                }
+
+            })
+
+            function del(obj) {
+                //alert("asdada");
+                var tl = $(obj).parent().attr('title');
+                $(obj).parent().remove();
+                $(".nav_li a").each(function () {
+                    if ($(this).html() == tl){
+                        $(this).parent().removeClass('active');
+                    }
+
+                })
+
+            }
+
+        </script>
+        <script src="../js/pages/resultadd.js"></script>
+        <script>
+            //点击跳转到详情页面
+            function toContractDetai(obj) {
+               var name = $(obj).html();
+                console.log($(obj).html());
+                var key = GetQueryString("key");
+                window.open("contractDetail.html?name="+name+"&key="+key,'_self')
+            }
+        </script>
+
+    <script src="../js/pages/header.js"></script>
+    <script src="../js/pages/public.js?time=20180724-17:00"></script>
+    <script src="../js/pages/result.js?time=20180724-17:00"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+body{
+    background-color: #f6f9f6;
+}
+
+.help li.current{
+    background-color: #6eafdc;
+    border: 1px solid transparent;
+}
+.help li.current a{
+    color: #fff;
+}
+/*问题导航*/
+.navs{
+    width: 240px;
+}
+.navs dl dt{
+    width: 100%;
+    height: 75px;
+    background: #fff url("../images/questions.png") no-repeat 35px center;
+    color: #3aa7e5;
+    text-align: center;
+    font-size: 22px;
+    line-height: 75px;
+    cursor: pointer;
+    border-bottom: 1px solid #d7d7d7;
+}
+.navs dl dd{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+.navs dl dd a{
+    display: inline-block;
+    width: 200px;
+    margin: 0 20px;
+    text-align: left;
+    color: #777;
+}
+.navs dl dd:not(:last-child) a{
+    border-bottom: 1px dashed #d7d7d7;
+}
+.navs dl dd:hover{
+    background-color: #d2e0f1;
+}
+.navs dl dd:active,.navs dl dd.current{
+    background-color: #6eafdc;
+}
+.navs dl dd:active a,.navs dl dd.current a{
+    color: #fff;
+}
+/*右侧答案*/
+.main_right {
+    width: 800px;
+    margin-left: 50px;
+}
+.answers{
+    margin: 50px 0;
+    line-height: 24px;
+    color: #5d5d5d;
+    font-size: 14px;
+}
+.main_right  img{
+    margin-top: 30px;
+}

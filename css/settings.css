@@ -1,0 +1,297 @@
+body{
+    background-color: #f7f9f6;
+}
+.main{
+    margin-top: 18px;
+    margin-bottom: 60px;
+    min-height: 70%;
+}
+.navs{
+    width: 20%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav_item{
+    height: 50px;
+    border-bottom: 2px solid #f0f5ed;
+}
+.nav_item a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.nav_item:hover{
+    background-color: #d2e0f1;
+}
+.nav_item.current,.nav_item:active{
+    background-color: #a5c2e3;
+}
+.nav_item:hover a{
+    color: #999;
+}
+.nav_item.current a,.nav_item:active a{
+    color: #fff;
+}
+.main_right{
+    width: 70%;
+    margin-left: 25px;
+
+}
+.main_title{
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #eeeeee;
+    background-color: #d7e0e9;
+    color: #273352;
+    line-height: 50px;
+    text-align: left;
+    display: inline-block;
+    padding-right: 70px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+.main_cont{
+    width: 100%;
+    background-color: #fff;
+    padding: 50px;
+}
+
+ul.form{
+    width: 100%;
+}
+ul.form>li{
+    width: 100%;
+    line-height: 50px;
+    border-bottom: 1px dashed #d5dfe6;
+}
+.form_item .label{
+    display: inline-block;
+    width: 100px;
+    padding-left: 10px;
+}
+.form_item>div{
+    padding-left: 10px;
+}
+.form_item p{
+    margin-right: 10px;
+}
+.amendBtn,.bindBtn,.sureSpan{
+    color: #6094cd;
+    cursor: pointer;
+}
+.hide_box{
+    margin: 30px 0;
+    margin-left: 14%;
+    /*display: none;*/
+}
+.hide_changePwd,.hide_changePhone{
+    position: relative;
+    margin-bottom: 30px;
+}
+.changePwd_item,.changePhone_item{
+
+    width: 448px;
+    height: 48px;
+    border: 1px solid #a0a0a0;
+    position: relative;
+    line-height: 50px;
+
+}
+.changePwd_item label,.changePhone_item label{
+    width: 90px;
+    text-align: left;
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+
+}
+.field{
+    width: 290px;
+    height: 20px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 14px;
+    /*line-height: 50px;*/
+/*    *line-height: 50px;
+    _line-height:50px;*/
+}
+.i_status{
+    font-size: 16px;
+    color: #82d300;
+    line-height: 40px;
+    display: none;
+}
+.hints{
+    position: absolute;
+    left: 2%;
+    z-index: 2;
+    line-height: 30px;
+    color: red;
+    display: none;
+}
+.phonecode_btn {
+    width: 100px;
+    height: 35px;
+    background-color: #6094cd;
+    color: #fff;
+    position: absolute;
+    right: 260px;
+    top: 8px;
+    font-size: 12px;
+}
+
+
+.btns{
+    width: 200px;
+    height: 37px;
+    border: 1px solid #6094cd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.okBtn{
+    background-color: #6094cd;
+    border: 1px solid transparent;
+    color: #fff;
+    margin-right:47px;
+}
+
+.cancelBtn{
+    background-color: #fff;
+    color: #6094cd;
+}
+.fa-weixin{
+    color: #00dd1c;
+}
+/*验证码开始*/
+
+#Txtidcode.txtVerification {
+    width: 220px;
+    /*height: 48px;
+    float: left;
+    padding-left: 10px;
+    font-size: 12px;
+    position: relative;*/
+}
+
+.changeImg {
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    margin-top: 6px;
+    /*float: left;*/
+}
+.amendBox{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.iptBox{
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #a0a0a0;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+}
+.iptBox>i{
+    position: absolute;
+    right: 3px;
+    top: -4px;
+}
+.amendIpt{
+    margin-right: 10px;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    width: 170px;
+}
+.form_item .hintsAmend{
+    color: red;
+    line-height: 30px;
+    display: none;
+    margin-top: -10px;
+}
+.sureSpan{
+    position: absolute;
+    right: -40px;
+    top: -7px;
+}
+/*法院下拉框*/
+
+.court_dropdown_wrapper {
+    position: absolute;
+    top: 42px;
+    left: 10px;
+    z-index: 10;
+    width: 200px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.court_dropdown_wrapper>div {
+    width: 300px;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.court_dropdown {
+    width: 100%;
+    background-color: #fff;
+}
+
+ul.court_dropdown li {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.court_dropdown li:hover {
+    background-color: #bcd0e8;
+}
+/*验证码结束*/
+.warning_border{
+    border: 1px solid red;
+}
+.passing_border{
+    border: 1px solid #6094cd;
+}
+.field:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #B0AEAE;
+}
+
+.field:-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #B0AEAE;
+}
+
+.field:-ms-input-placeholder {
+    color: #B0AEAE;
+}
+
+.field::-webkit-input-placeholder {
+    color: #B0AEAE;
+}
+@media screen and (min-width: 1366px){
+    .main{
+        min-height:70%;
+    }
+}
+@media screen and (min-width: 1920px){
+    .main{
+        min-height:70%;
+    }
+}

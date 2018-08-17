@@ -1,0 +1,141 @@
+﻿body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#333; font-size:14px; font-family:Microsoft YaHei ,Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Microsoft YaHei, Verdana,Helvetica,Arial,sans-serif; }
+input::-ms-clear{display:none;outline: none}
+input{outline: none;border: none;}
+table { border-collapse:collapse; }
+html {overflow-y: scroll;height: 100%;
+    width:100%;min-width: 1150px}
+body{
+    height: 100%;
+}
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.inner{
+    width: 1150px;
+    margin: 0 auto;
+}
+/*分页*/
+.paging{
+    text-align: center;
+}
+.paging ul.pageNumBox{
+    padding: 18px 0;
+    display: inline-block;
+}
+.paging ul.pageNumBox li{
+    float: left;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #D7DDDF;
+    margin-right: 9px;
+    color: #3A3B3C;
+    font-size: 12px;
+    cursor: pointer;
+}
+.paging ul.pageNumBox li.prePage,.paging ul.pageNumBox li.nextPage{
+    width: 58px;
+}
+.paging ul.pageNumBox li.current{
+    background-color: #008FD3;
+    color: #FFF;
+}
+.red{
+    color: #e85e40 !important;
+}
+.fg{
+    color: #6094cc;
+    text-decoration: underline;
+}
+/*法规详情*/
+.law_detail{
+    width: 483px;
+    border: 1px solid #a8a8a8;
+    /*
+    background: rgba(252,253,200,0.95);
+    */
+    background: rgb(252,253,200);
+    opacity: 0.95;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#19ffffff,endColorstr=#19ffffff);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+
+    box-shadow: 2px 3px 3px #d1d1d1 ;
+    position: relative;
+    padding:10px 15px 10px 15px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.law_detail:before{
+    position: absolute;
+    top: -7px;
+    left: 380px;
+    display: inline-block!important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #a8a8a8;
+    border-left: 7px solid transparent;
+    /*
+    border-bottom-color: rgba(0,0,0,.5);
+    */
+    border-bottom-color: rgb(0,0,0);
+    content: '';
+}
+.law_detail:after{
+    position: absolute;
+    top: -6px;
+    left: 381px;
+    display: inline-block!important;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fcfdd0;
+    border-left: 6px solid transparent;
+    content: '';
+}
+.hide{
+    display: none;
+}
+#main{
+    min-height: 100%;
+    min-width: 100%;
+}
+.M-box a{
+    border: 1px solid #d6e0e7;
+}
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+input:-ms-input-placeholder {
+    color: #bfbfbf;
+}
+
+input::-webkit-input-placeholder {
+    color: #bfbfbf;
+}
+.placeholder{
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;
+}
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}

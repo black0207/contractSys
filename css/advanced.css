@@ -1,0 +1,240 @@
+@media screen and (min-width: 1366px){
+    #main{
+        min-height:100%;
+    }
+}
+@media screen and (min-width: 1920px){
+    #main{
+        min-height:80%;
+    }
+}
+
+.searchOutterBox {
+    background-color: #fcfcfc;
+}
+
+.friendTip {
+    font-size: 12px;
+    text-align: center;
+    padding: 19px 0 18px 0;
+}
+
+.inputBox {
+	width:622px;
+    height: 42px;
+    background-color: #fff;
+	margin:0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.searchInp {
+    width: 600px;
+    height: 20px;
+    margin-top: 9px;
+    padding-left: 20px;
+
+}
+.inputBox:hover {
+    border: 1px solid #6094cd;
+    box-shadow: 0 0 1px 0 #6094cd inset;
+}
+/*.searchInp:focus {*/
+    /*border: 1px solid #6094cd;*/
+/*}*/
+.dropList {
+    width: 620px;
+    border: 1px solid #d9d9d9;
+    border-top: none;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    background-color: #FFFFFF;
+    max-height: 352px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    z-index: 1;
+}
+
+.dropList li {
+    width: 600px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 20px;
+    text-align: left;
+    color: #262626;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dropList li:hover {
+    background-color: #e0eceb;
+}
+.li-active{
+    background-color: #e0eceb;
+}
+.casecauseOuterBox {
+    background-color: #f6f9f6;
+    padding-top: 20px;
+    /*overflow: hidden;*/
+}
+
+.firstLevel {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e6eded;
+    margin-bottom: 20px;
+}
+
+.firstItem {
+    float: left;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-top: 1px solid #e6eded;
+    border-right: 1px solid #e6eded;
+    color: #999999;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #FFFFFF;
+    color: #6094cd;
+    border-top: 2px solid #6094cd;
+}
+
+/*.chooseBox {}*/
+
+.catelogeBox {
+    position: relative;
+}
+
+.secondLevel {
+    width: 120px;
+    height: 100%;
+    font-size: 16px;
+    color: #808080;
+    text-align: center;
+    background-color: #fbfdfb;
+    border-bottom: 1px solid #ecf2f2;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /*寮规�х洅妯″瀷 楂樺害鐧惧垎姣旂殑鐖跺厓绱犱腑瀛愬厓绱犲瀭鐩村眳涓�*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdLevel {
+    width: 1010px;
+    padding: 20px 0px 30px 20px;
+    background-color: #eaf3ea;
+    border-bottom: 1px solid #fdfbfd;
+}
+
+.thirdLevel ul {}
+
+.thirdLevel ul li {
+    float: left;
+    width: 180px;
+    height: 60px;
+    margin-right: 20px;
+    border: 1px solid #e6e6e6;
+    margin-top: 10px;
+}
+.thirdLevel ul li:hover{
+    border: 1px solid #acc3cb;
+}
+.thirdLevel ul li:hover a{
+    background-color: #d5eae3;
+}
+
+.casecauseItem {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.casecauseItem .icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    position: relative;
+}
+
+.civilCauseImg {
+    background-image: url("../images/civilCause.png");
+}
+
+.criminalCauseImg {
+    background-image: url("../images/criminalCause.png");
+}
+
+.administrativeImg {
+    background-image: url("../images/administrative.png");
+}
+
+.icon i {
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.casecause {
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    color: #333333;
+    float: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.overLine {
+    line-height: 24px;
+    padding-top: 6px;
+    height: auto;
+}
+
+.tip-bottom {
+    background-color: #f6f9f6;
+}
+
+.tip-bottom p {
+    width: 1010px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 140px;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+.goTop {
+    color: #6094cd;
+}
+

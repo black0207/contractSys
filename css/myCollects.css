@@ -1,0 +1,182 @@
+
+body{
+    background-color: #f7f9f6;
+}
+.main{
+    margin-top: 18px;
+    margin-bottom: 60px;
+    min-height: 70%;
+}
+.navs{
+    width: 20%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+.nav_item{
+    height: 50px;
+    border-bottom: 2px solid #f0f5ed;
+}
+.nav_item a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.nav_item:hover{
+    background-color: #d2e0f1;
+}
+.nav_item.current,.nav_item:active{
+    background-color: #a5c2e3;
+}
+.nav_item:hover a{
+    color: #999;
+}
+.nav_item.current a,.nav_item:active a{
+    color: #fff;
+}
+.main_right{
+    width: 75%;
+    margin-left: 25px;
+
+}
+.title_box{
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #eeeeee;
+    background-color: #d7e0e9;
+    color: #273352;
+    line-height: 50px;
+    text-align: left;
+    display: inline-block;
+    padding-right: 12px;
+    padding-left: 30px;
+    /*box-sizing: border-box;*/
+}
+.main_title{
+    font-size: 16px;
+    float: left;
+}
+.main_cont{
+    width: 100%;
+    margin-bottom: 20px;
+    /*box-sizing: border-box;*/
+}
+.collect_lists{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 0;
+    display: none;
+}
+.collect_list {
+    border-bottom:1px dashed #d6e0e7;
+    padding: 10px 5px;
+    letter-spacing: 0;
+}
+.collect_list span{
+    cursor: pointer;
+}
+.titles{
+    color: #6094cd;
+    font-size: 16px;
+    font-weight: 600;
+    width: 62%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.timer{
+    font-size: 12px;
+    color: #333;
+    width: 15%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*line-height: 20px;*/
+    text-align: center;
+}
+.reDownload{
+    color:#52749b;
+    font-size: 12px;
+    width: 10%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+.reDownload i{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("../images/download_s.png") no-repeat 0 -1px;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.collect_list p{
+    display: inline-block;
+    color: #999;
+    margin-right: 20px;
+}
+.collectBtn{
+    color:#52749b;
+    font-size: 12px;
+    width: 10%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+.collectBtn i{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("../images/collect_s.png") no-repeat 0 -1px;
+    vertical-align: middle;
+    padding-left: 5px;
+
+}
+.clearBtn{
+    padding: 3px 5px;
+    background-color: #fff;
+    color: #52749b;
+    font-size: 14px;
+    border: 1px solid #6281a4;
+    cursor: pointer;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.cancelBtns,.clearBtn:hover{
+    background-color: #52749b;
+    color: #fff;
+}
+.emptyBox{
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    display: none;
+}
+.pagination {
+    width: 50%;
+    /* margin: 0 auto; */
+    margin-left: 40%;
+}
+@media screen and (min-width: 1366px){
+    .main{
+        min-height:70%;
+    }
+}
+@media screen and (min-width: 1920px){
+    .main{
+        min-height:70%;
+    }
+}
+.M-box a:hover{
+    background-color: #d2e0f1;
+}
+
