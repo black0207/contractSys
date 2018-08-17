@@ -81,19 +81,19 @@ $(document).ready(function(){
     })
 })*/
 
-var num = 0;
+
 $('.result_box1').change(function () {
 
     $(".result_item_cont p").each(function () {
-        num++;
+
         if ($(this).height()<114){
 
             $(this).parent().find("a").remove();
         }else {
             $(this).addClass("result_item_cont_p");
         }
-        console.log("次数是===="+num)
-        num = 0;
+        console.log("触发了change事件！");
+
     })
 })
 
