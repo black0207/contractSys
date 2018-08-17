@@ -1,18 +1,19 @@
 /*footer部分*/
 #footer{
     width: 100%;
-    height: 154px;
+    height: 120px;
     background-color: #2d323f;
     border-top: 1px solid #d9e2e2;
 }
 .footerLfet{
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-left: 100px;
 }
 .footerMid{
     text-align: center;
-    margin-left: 50%;
+    margin-left: 400px;
     font-size: 14px;
-    margin-top: 43px;
+    margin-top: 33px;
 }
 .footerMid ul{
     height: 50px;

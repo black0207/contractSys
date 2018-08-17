@@ -57,7 +57,7 @@ $(document).ready(function(){
        //console.log(str);
 
        $('.result_box1').html('');
-       $('.result_box1').html(str);
+       $('.result_box1').html(str).change();
        str = '';
    });
 
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 });
 
-$(window).load(function(){
+/*$(window).load(function(){
     $(".result_item_cont p").each(function () {
         if ($(this).height()<114){
 
@@ -78,6 +78,22 @@ $(window).load(function(){
         }else {
             $(this).addClass("result_item_cont_p");
         }
+    })
+})*/
+
+var num = 0;
+$('.result_box1').change(function () {
+
+    $(".result_item_cont p").each(function () {
+        num++;
+        if ($(this).height()<114){
+
+            $(this).parent().find("a").remove();
+        }else {
+            $(this).addClass("result_item_cont_p");
+        }
+        console.log("次数是===="+num)
+        num = 0;
     })
 })
 
@@ -141,20 +157,7 @@ function searchData(key) {
         str = '';
     })
 
-    var num = 0;
-    $('.result_box1').change(function () {
 
-        $(".result_item_cont p").each(function () {
-            num++;
-            if ($(this).height()<114){
-
-                $(this).parent().find("a").remove();
-            }else {
-                $(this).addClass("result_item_cont_p");
-            }
-            console.log("次数是===="+num)
-        })
-    })
 
 }
 
