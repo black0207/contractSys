@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/result.css" />
+    <link rel="stylesheet" href="../css/pagination.css"/>
     <link rel="shortcut icon" href="../favicon.ico" />
 </head>
 
@@ -524,6 +525,7 @@
                         <!--</div>-->
                     </div>
                     <!--分页-->
+                    <div id="paginationBox" class="paginationBox"></div>
                 </div>
 
             <div class="png hide">
@@ -572,6 +574,7 @@ IE8只能支持jQuery1.9
     <!--[if lte IE 8]>
 <script src="../js/jquery/jquery.min.js"></script>
 <script src="../js/json2.js"></script>
+<script src="../js/jquery/jquery.pagination.js"></script>
 <![endif]-->
     <!--<script src="../js/jquery.cookie.js"></script>-->
     <script src="../resources/loading/spin.min.js"></script>
@@ -648,6 +651,19 @@ IE8只能支持jQuery1.9
                 })
 
             }
+//结果页面 分页显示
+            $('.paginationBox').pagination({
+                pageCount: 50,
+                jump: true,
+                coping: true,
+                homePage: '首页',
+                endPage: '末页',
+                prevContent: '上页',
+                nextContent: '下页',
+                callback: function (api) {
+                    console.log(api.getCurrent())
+                }
+            });
 
         </script>
         <script src="../js/pages/resultadd.js"></script>
