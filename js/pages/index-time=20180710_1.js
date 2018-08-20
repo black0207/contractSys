@@ -399,7 +399,9 @@ $(document).keydown(function(e) {
 
 function wordSearch() {
     var key = $('.searchTitle span.active').html(),
-        value = $('.search_ipt').val();
+        value = $('.search_ipt').val(),
+        searchSelect = $(".search_select input").val(),
+     pageNum = 1;
     if (!trim($('.search_ipt').val())) {
         alert("请输入检索条件！")
         return false;
@@ -408,7 +410,7 @@ function wordSearch() {
 /*新增检索事件的跳转方法*/
     switch (key){
         case "合同查询":
-            window.open("result.html?key="+value,"_self");
+            window.open("result.html?key="+value+"&searchSelect="+searchSelect+"&pageNum="+pageNum,"_self");
             break;
         case "构想查询":
             window.open( "resultidea.html?key="+value,"_self");
