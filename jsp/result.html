@@ -481,7 +481,7 @@
                         <!--</div>-->
                     </div>
                     <!--分页-->
-                    <div id="paginationBox" class="paginationBox"></div>
+                    <div id="M-box3" class="M-box3 m-style"></div>
                 </div>
 
             <div class="png hide">
@@ -521,6 +521,7 @@
 
     <div id="iframe" name="tempiframe" style="display:none;"></div>
     <script src="../js/jquery/jquery-2.1.1-min.js"></script>
+    <script src="../js/jquery/jquery.pagination.js"></script>
     <!--<script src="../js/es5-shim-master/es5-shim.min.js"></script>
 <script src="../js/es5-shim-master/es5-sham.min.js"></script>
 <script src="../js/html5shiv.js"></script>-->
@@ -607,19 +608,25 @@ IE8只能支持jQuery1.9
                 })
 
             }
-//结果页面 分页显示
-            $('.paginationBox').pagination({
-                pageCount: 50,
-                jump: true,
-                coping: true,
-                homePage: '首页',
-                endPage: '末页',
-                prevContent: '上页',
-                nextContent: '下页',
-                callback: function (api) {
-                    console.log(api.getCurrent())
-                }
-            });
+
+            //结果页面 分页显示
+            $(function () {
+
+                $('.M-box3').pagination({
+                    pageCount: 50,
+                    jump: false,
+                    coping: true,
+                    homePage: '首页',
+                    endPage: '末页',
+                    prevContent: '上页',
+                    nextContent: '下页',
+                    callback: function (api) {
+                        console.log(api.getCurrent());
+                        window.open("search?name="+name+"&key="+key,'_self')
+                    }
+                });
+            })
+
 
         </script>
         <script src="../js/pages/resultadd.js"></script>
@@ -631,11 +638,18 @@ IE8只能支持jQuery1.9
                 var key = GetQueryString("key");
                 window.open("contractDetail.html?name="+name+"&key="+key,'_self')
             }
+
+
+
         </script>
 
     <script src="../js/pages/header.js"></script>
     <script src="../js/pages/public.js?time=20180724-17:00"></script>
     <script src="../js/pages/result.js?time=20180724-17:00"></script>
+        <script>
+
+
+        </script>
 
 </body>
 
