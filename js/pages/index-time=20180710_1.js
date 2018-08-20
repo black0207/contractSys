@@ -401,7 +401,7 @@ function wordSearch() {
     var key = $('.searchTitle span.active').html(),
         value = $('.search_ipt').val();
     if (!trim($('.search_ipt').val())) {
-        alert("请输入检索关键词！")
+        alert("请输入检索条件！")
         return false;
     }
 

@@ -61,22 +61,24 @@
 /*ä¸­é—´éƒ¨åˆ†*/
 .searchMid {
     margin-left: 2px;
-    width: 390px;
+    width: 380px;
     height: 35px;
     background-color: #fff;
     position: relative;
 }
 
 .search_ipt {
-    width: 390px;
-    height: 27px;
-    padding-top: 7px;
-    background-color: #fff;
-    padding-left: 15px;
-    box-sizing: border-box;
-    text-align: left;
-    color: #333;
-    /*line-height:35px;*/
+    width: 380px !important;
+    height: 27px !important;
+    padding-top: 7px !important;
+    background-color: #fff !important;
+    padding-left: 15px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    color: #333 ;
+    margin: 0px;
+    border:none;
+    line-height:35px;
 }
 
 .search_glass {
