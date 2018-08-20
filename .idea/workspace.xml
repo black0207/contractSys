@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9e6dd64-0583-403b-bd65-7b231d79ff05" name="Default" comment="新增分页显示">
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/common.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/reset.css" />
+    <list default="true" id="c9e6dd64-0583-403b-bd65-7b231d79ff05" name="Default" comment="">
+
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/mainBg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/mainBg1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/mainBg2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/mainBg3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/mainBg4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/css/pagination.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/jquery/jquery.pagination.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/result.css" afterPath="$PROJECT_DIR$/css/result.css" />
       <change beforePath="$PROJECT_DIR$/jsp/result.html" afterPath="$PROJECT_DIR$/jsp/result.html" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/jsp/index.html" afterPath="$PROJECT_DIR$/jsp/index.html" />
+
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,6 +34,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
               <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -35,8 +45,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
+
+      <file leaf-file-name="contractDetail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsp/contractDetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="648" column="0" lean-forward="false" selection-start-line="648" selection-start-column="0" selection-end-line="648" selection-end-column="56" />
+
+      <file leaf-file-name="footer.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/footer.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
               <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -86,9 +103,14 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="contractDetail.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/contractDetail.css">
       <file leaf-file-name="pagination.css" pinned="false" current-in-tab="false">
         <entry file="file://E:/js 插件/pagination/pagination.css">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1188">
+              <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+              <folding />
             <state relative-caret-position="226">
               <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
               <folding />
@@ -138,8 +160,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -156,6 +179,9 @@
       <find>search</find>
       <find>result_item_cont</find>
       <find>fa-angle-down</find>
+      <find>docBox</find>
+      <find>.text</find>
+      <find>.arrow</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,7 +200,6 @@
         <option value="$PROJECT_DIR$/css/result1.css" />
         <option value="$PROJECT_DIR$/jsp/resultidea.html" />
         <option value="$PROJECT_DIR$/jsp/checkResult.html" />
-        <option value="$PROJECT_DIR$/jsp/contractDetail.html" />
         <option value="$PROJECT_DIR$/jsp/ideaDetail.html" />
         <option value="$PROJECT_DIR$/js/pages/index-time=20180710_1.js" />
         <option value="$PROJECT_DIR$/css/footer.css" />
@@ -195,8 +220,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="5" />
+    <option name="y" value="28" />
     <option name="width" value="1920" />
     <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -247,6 +277,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,7 +285,8 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/caa_v3.0" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/caa_v3.0/caa_v3.0/jsp/myCollects.html" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/caa_v3.0/caa_v3.0/jsp/myCollects.html" /><<<<<<< HEAD
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -345,13 +377,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -453,6 +486,9 @@
         <state relative-caret-position="3135">
           <caret line="165" column="19" lean-forward="true" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="19" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -576,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/contractDetail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/pages/ideaDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18647">
@@ -627,12 +656,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/pages/index-time=20180710_1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="410">
+          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/result.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="830" column="19" lean-forward="false" selection-start-line="830" selection-start-column="3" selection-end-line="830" selection-end-column="21" />
+          <folding />
+
     <entry file="file://$PROJECT_DIR$/jsp/resultidea.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="824">
