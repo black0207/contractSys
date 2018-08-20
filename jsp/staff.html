@@ -3,11 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/staff.css" />
+    <link rel="stylesheet" href="../css/public.css" />
     <script src="../js/jquery/jquery-2.1.1-min.js"></script>
     <title>科研人员智能检索</title>
 </head>
 <body>
     <div class="main">
+        <div class="inner" style="height: 55px;">
+            <div class="search_contact" style="display: inline;margin-left: 50px;">
+                科研人员智能检索
+            </div>
+
+
+            <div class="searchBox fl" style="float: right;display: inline;margin-right: 15%;">
+                <div class="searchMid fl">
+                    <span class="placeholder" style="font-size: 14px;  margin-top: 0px; position: absolute; color: #b0aeae; padding-left: 15px; z-index: 2; line-height: 35px">输入文本</span>
+                    <input type="text" class="search_ipt">
+                </div>
+                <div class="searchRig fl">
+                    <input class="search_glass" type="button" value="">
+                    <input class="result_search" type="button" value="在结果中搜索">
+                </div>
+            </div>
+        </div>
+        <div class="search_result fl">
+            <div class="search_person">
+                搜索结果
+            </div>
+            <div class="search_line">
+            </div>
+            <div class="result_box1">
+                <div class="result_item">
+                    < img src="../images/person1.png">
+                    <div class="result_item_keywords">
+                        <span>李春丽</span>
+                        <span>中国电科十五所</span>
+                        <span>物联网</span>
+                    </div>
+                </div>
+                <div class="result_item" id="">
+                    < img src="../images/person1.png">
+                    <div class="result_item_keywords">
+                        <span>李春丽</span>
+                        <span>中国电科十五所</span>
+                        <span>物联网</span>
+                    </div>
+                </div>
+                <div class="result_item" >
+                    < img src="../images/person1.png">
+                    <div class="result_item_keywords">
+                        <span>李春丽</span>
+                        <span>中国电科十五所</span>
+                        <span>物联网</span>
+                    </div>
+                </div>
+                <div class="result_item" >
+                    < img src="../images/person1.png">
+                    <div class="result_item_keywords">
+                        <span>李春丽</span>
+                        <span>中国电科十五所</span>
+                        <span>物联网</span>
+                    </div>
+                </div>
+            </div>
+            <div class="search_person">
+                基本信息
+            </div>
+            <div class="search_line">
+            </div>
+
+
+            <div class="result_box1">
+                <div class="result_info">
+                    < img src="../images/person1.png">
+                    <div class="result_info_left">
+                        <span>姓名：李春丽</span>
+                        <span>民族：汉</span>
+                        <span>出生年月：1988年5月5日</span>
+                        <span>专业：计算机</span>
+                        <span>工作单位：15所</span>
+                        <span>技术职称：高级工程师</span>
+                        <span>是否专家：是</span>
+                        <span>技术专长：物联网、大数据</span>
+                    </div>
+                    <div class="result_info_right">
+                        <span>性别：女</span>
+                        <span>政治面貌：党员</span>
+                        <span>涉密程度：非涉密人员</span>
+                        <span>最高学位：博士研究生</span>
+                        <span>行政职务：无</span>
+                        <span>联系电话：15524552225</span>
+                        <span>所在专家组：物联网</span>
+                    </div>
+                    <input class="result_resume" type="button" value="查看个人简历">
+                </div>
+            </div>
+        </div>
         <div class="tab clearfix">
             <ul class="tab-btn">
                 <li id="tab1" class="tab-research current">学术研究情况</li>

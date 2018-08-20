@@ -825,6 +825,9 @@ max-height: 600px;
 #userName, #userPwd {
     text-align: left;
 }
+.nav_li:hover{
+    background-color:#ddd;
+}
 .nav_li a{
     padding-left: 27px;
     display: inline-block;

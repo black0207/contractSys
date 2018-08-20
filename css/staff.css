@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 }
 .tab, .research-detail, .project-detail {
-    width: 800px;
+    width: 843px;
     margin: 0 auto;
 }
 .tab ul {
@@ -83,4 +83,155 @@ h4 {
 }
 .hide {
     display: none;
+}
+
+
+/*zxf*/
+.search_contact {
+    font-weight: 550;
+    line-height: 50px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.searchBox {
+    width: 679px;
+    height: 35px;
+    margin-left: 45px;
+    margin-top: 12px;
+}
+
+.searchMid {
+    margin-left: 2px;
+    width: 390px;
+    height: 35px;
+    background-color: #fff;
+    position: relative;
+}
+
+.search_ipt {
+    width: 390px;
+    height: 27px;
+    padding-top: 7px;
+    background-color: #fff;
+    padding-left: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #333;
+}
+
+.searchRig input {
+    width: 35px;
+    height: 35px;
+    background-color: #6094cd;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 1px;
+    float: left;
+}
+
+.search_glass {
+    background: #6094cd url(../images/search.png) no-repeat 8px 9px;
+}
+
+
+.searchRig input.result_search {
+    margin-left: 5px;
+    width: 108px;
+}
+
+.searchRig input {
+    height: 35px;
+    background-color: #6094cd;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 1px;
+    float: left;
+}
+
+.search_result {
+    width: 843px;
+    margin-left: 21px;
+}
+
+.search_person {
+    font-weight: 550;
+    line-height: 30px;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.search_line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.result_item {
+    width: 15%;
+    height: 180px;
+    background-color: #fff;
+    border: 1px solid #c7cdcf;
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.search_person {
+    font-weight: 550;
+    line-height: 30px;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+
+.result_info {
+    width: 100%;
+    height: 190px;
+    background-color: #fff;
+    border: 1px solid #c7cdcf;
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.result_info img {
+    width: 140px;
+    height: 140px;
+    float: right;
+    margin-right: 12px;
+    margin-top: 15px;
+}
+
+.result_info_left {
+    display: inline-block;
+}
+
+.result_info span {
+    font-size: 12px;
+    display: block;
+    margin-left: 20px;
+}
+
+.result_info_right {
+    float: right;
+    margin-right: 30%;
+}
+
+.result_resume {
+    width: 120px;
+    float: right;
+    margin-right: 5%;
+    height: 30px;
+    background-color: #bbddf1;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 6px;
 }
