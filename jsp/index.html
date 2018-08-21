@@ -126,13 +126,13 @@
         <div class="searchBox">
             <div class="searchLeft fl">
                 <div class="search_select">
-                    <input type="text" value="名  称" readonly>
+                    <input type="text" value="名称" readonly>
                     <i class="fa fa-angle-down"></i>
                 </div>
                 <div class="search_menu hide">
                     <ul>
-                        <li><a href="javascript:void(0);">名  称</a></li>
-                        <li><a href="javascript:void(0);">编  号</a></li>
+                        <li><a href="javascript:void(0);">名称</a></li>
+                        <li><a href="javascript:void(0);">编号</a></li>
                         <li><a href="javascript:void(0);">负责人</a></li>
                         <li><a href="javascript:void(0);">所属单位</a></li>
                         <li><a href="javascript:void(0);">全文内容</a></li>
@@ -228,6 +228,13 @@
 			}else{
 				$("#fileForm1").css('display','none');
 			}
+
+			if ($(this).html() == "人员查询"){
+
+                $(".search_select").hide();
+            }else {
+                $(".search_select").show();
+            }
 		
 		});
 	
