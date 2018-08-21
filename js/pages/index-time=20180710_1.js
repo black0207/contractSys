@@ -410,13 +410,13 @@ function wordSearch() {
 /*新增检索事件的跳转方法*/
     switch (key){
         case "合同查询":
-            window.open("result.html?key="+value+"&searchSelect="+searchSelect+"&pageNum="+pageNum,"_self");
+            window.open("http://192.168.12.37:8890/Search?searchContent="+value+"&key="+searchSelect+"&pageNum="+pageNum,"_self");
             break;
         case "构想查询":
             window.open( "resultidea.html?key="+value,"_self");
             break;
-        case "人员/机构查询":
-            window.open("result.html?key="+value,"_self");
+        case "人员查询":
+            window.open("staff.html?key="+value,"_self");
             break;
     }
 
