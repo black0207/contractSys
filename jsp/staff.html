@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/staff.css" />
     <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <script src="../js/jquery/jquery-2.1.1-min.js"></script>
     <title>科研人员智能检索</title>
 </head>
 <body>
+    <div id="header">
+        <div class="inner">
+            <a href="index.html" class="fl logo"><img src="../images/hetong1.png" height="40px" style="vertical-align: bottom;margin-bottom: -5px;">
+                <span style="color: white;line-height: 36px;font-size: 26px;">XX智能检索系统</span></a>
+            <div class="login fr">
+                <a href="./register.html" class="registerA">注册</a>
+                <a href="javascript:void (0);" class="loginA">登录</a>
+            </div>
+        </div>
+    </div>
     <div class="main">
         <div class="inner" style="height: 55px;">
             <div class="search_contact" style="display: inline;margin-left: 50px;">
@@ -26,45 +38,46 @@
                 </div>
             </div>
         </div>
-        <div class="search_result fl">
+        <div class="search_result">
             <div class="search_person">
                 搜索结果
             </div>
             <div class="search_line">
             </div>
             <div class="result_box1">
+                <div class="result_item active">
+                    <img src="../images/personphoto.png">
+                    <div class="result_item_keywords">
+                        <span>李春丽</span>
+                        <span>中国电科十五所</span>
+                        <span>物联网</span>
+                    </div>
+                </div>
                 <div class="result_item">
-                    < img src="../images/person1.png">
+                    <img src="../images/personphoto.png">
                     <div class="result_item_keywords">
-                        <span>李春丽</span>
+                        <span>张佳佳</span>
                         <span>中国电科十五所</span>
-                        <span>物联网</span>
+                        <span>大数据</span>
                     </div>
                 </div>
-                <div class="result_item" id="">
-                    < img src="../images/person1.png">
+                <div class="result_item" >
+                    <img src="../images/personphoto.png">
                     <div class="result_item_keywords">
-                        <span>李春丽</span>
+                        <span>王志</span>
                         <span>中国电科十五所</span>
                         <span>物联网</span>
                     </div>
                 </div>
                 <div class="result_item" >
-                    < img src="../images/person1.png">
+                    <img src="../images/personphoto.png">
                     <div class="result_item_keywords">
                         <span>李春丽</span>
                         <span>中国电科十五所</span>
                         <span>物联网</span>
                     </div>
                 </div>
-                <div class="result_item" >
-                    < img src="../images/person1.png">
-                    <div class="result_item_keywords">
-                        <span>李春丽</span>
-                        <span>中国电科十五所</span>
-                        <span>物联网</span>
-                    </div>
-                </div>
+                <!--<div>……</div>-->
             </div>
             <div class="search_person">
                 基本信息
@@ -75,7 +88,7 @@
 
             <div class="result_box1">
                 <div class="result_info">
-                    < img src="../images/person1.png">
+                    <img src="../images/personphoto.png">
                     <div class="result_info_left">
                         <span>姓名：李春丽</span>
                         <span>民族：汉</span>
@@ -95,11 +108,13 @@
                         <span>联系电话：15524552225</span>
                         <span>所在专家组：物联网</span>
                     </div>
-                    <input class="result_resume" type="button" value="查看个人简历">
+                    <div>
+                        <input class="result_resume" type="button" value="查看个人简历">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tab clearfix">
+        <div class="tab clearfix" style="margin-top: 15px;margin-bottom: 5px;">
             <ul class="tab-btn">
                 <li id="tab1" class="tab-research current">学术研究情况</li>
                 <li id="tab2" class="tab-project">项目承研情况</li>
@@ -169,6 +184,18 @@
                     <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
                     <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
                 </ol>
+            </div>
+        </div>
+    </div>
+    <!--footer开始-->
+    <div id="footer">
+        <div class="inner">
+            <div class="footerLfet fl">
+                <a href="javascript:void(0);"><span style="color: white"><img src="../images/11.png" style="width: 100px;height: 50px;"></span></a>
+            </div>
+            <div class="footerMid fl">
+                <p>版权所有 中国电子科技集团公司第十五研究所 </p>
+                <p>地址：北京市海淀区北四环中路211号华北科技大厦15层 邮编：100083</p>
             </div>
         </div>
     </div>

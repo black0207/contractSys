@@ -1,16 +1,20 @@
-body {
-    background-color: #f6f960;
-    padding-top: 30px;
-    box-sizing: border-box;
-}
+/*body {*/
+    /*background-color: #f6f960;*/
+    /*padding-top: 30px;*/
+    /*box-sizing: border-box;*/
+/*}*/
 
 .main {
-    background-color: #fff;
-    width: 900px;
+    background-color: #f6f9f6;
+    /*width: 900px;*/
     margin: 0 auto;
 }
+
+
+
+
 .tab, .research-detail, .project-detail {
-    width: 843px;
+    width: 1000px;
     margin: 0 auto;
 }
 .tab ul {
@@ -33,7 +37,8 @@ body {
 }
 .tab ul li.current {
     background-color: #cacaca;
-    color: #666666;
+    color: black;
+    letter-spacing: 2px;
 }
 .clearfix:after{
     content: "020";
@@ -56,6 +61,8 @@ h4 {
     padding-left: 14px;
     font-weight: bolder;
 }
+
+
 .arrow {
     color: #adadad;
     float: right;
@@ -65,6 +72,12 @@ h4 {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 14px;
+    letter-spacing: 0.5px;
+}
+
+/*zxf*/
+.text p{
+    line-height: 24px;
 }
 .text .left {
     width: 300px;
@@ -154,16 +167,17 @@ h4 {
 }
 
 .search_result {
-    width: 843px;
-    margin-left: 21px;
+    width: 1000px;
+    margin: 0 auto;
 }
 
-.search_person {
-    font-weight: 550;
-    line-height: 30px;
-    font-size: 16px;
-    margin-bottom: 2px;
-}
+/*.search_person {*/
+    /*font-weight: 550;*/
+    /*line-height: 30px;*/
+    /*font-size: 16px;*/
+    /*margin-bottom: 2px;*/
+    /*letter-spacing: 2px;*/
+/*}*/
 
 .search_line {
     width: 100%;
@@ -182,11 +196,29 @@ h4 {
     display: inline-block;
 }
 
+.result_item_keywords{
+    text-align: center;
+}
+
+.result_item img{
+    width: 100px;
+    height: 100px;
+    margin-left: 23px;
+}
+
+.result_item span{
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+}
+
 .search_person {
     font-weight: 550;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 2px;
+    margin-top: 10px;
+    letter-spacing: 2px;
 }
 
 
@@ -211,12 +243,15 @@ h4 {
 
 .result_info_left {
     display: inline-block;
+    float: left;
 }
 
 .result_info span {
-    font-size: 12px;
+    font-size: 14px;
     display: block;
     margin-left: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
 }
 
 .result_info_right {
@@ -225,13 +260,13 @@ h4 {
 }
 
 .result_resume {
-    width: 120px;
+    width: 140px;
     float: right;
     margin-right: 5%;
     height: 30px;
     background-color: #bbddf1;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
     border-radius: 6px;
 }
